@@ -1,15 +1,11 @@
-import { isEmpty, uniq, findIndex } from 'lodash';
-import { useQuery, useLazyQuery } from '@apollo/react-hooks';
-import { pagePreview } from '../../../graphql_states/contentstack';
+import { isEmpty, uniq } from 'lodash';
+import { pagePreview } from '../graphql_states/contentstack';
 
 const imageVideoAssociatedRecords = {
   imageIds: [],
   videoIds: [],
 };
 
-const findReference = (components, type) => (
-  components.filter((obj) => obj.__typename === type)
-);
 
 const findCardReference = (components) => (
   components.filter((obj) => obj.__typename === 'PageComponentsComponentsCardReference' && !isEmpty(obj.card_reference))
@@ -160,64 +156,37 @@ const updateAssociatedContentIds = (data, contentType) => {
   updateAssociatedContentOtherThanCardIds(data, contentType);
 };
 
-const usePageQuery = (pageCmsId, locale, client) => {
-  const mainContentResCard = useQuery(
-    pagePreview.queries.GET_PAGE_PREVIEW_WITH_MAIN_CONTENT_CARD,
-    { variables: { pageCmsId, locale: locale}, fetchPolicy: 'network-only' },
+const getPageData = async (pageCmsId, locale, client) => {
+  const mainContentResCard = await client.query({
+    query: pagePreview.queries.GET_PAGE_PREVIEW_WITH_MAIN_CONTENT_CARD,
+    variables: { pageCmsId, locale: locale}, fetchPolicy: 'network-only' },
   );
 
-  let mainContentRes = useQuery(
-    pagePreview.queries.GET_PAGE_PREVIEW_WITH_MAIN_CONTENT,
-    { variables: { pageCmsId, locale: locale}, fetchPolicy: 'network-only' },
+  let mainContentRes = await client.query({
+    query: pagePreview.queries.GET_PAGE_PREVIEW_WITH_MAIN_CONTENT,
+    variables: { pageCmsId, locale: locale}, fetchPolicy: 'network-only' },
   );
 
-  const secondaryContentRes = useQuery(
-    pagePreview.queries.GET_PAGE_PREVIEW_SECONDARY_CONTENT,
-    { variables: { pageCmsId, locale }, fetchPolicy: 'network-only' },
+  const secondaryContentRes = await client.query({
+    query: pagePreview.queries.GET_PAGE_PREVIEW_SECONDARY_CONTENT,
+    variables: { pageCmsId, locale }, fetchPolicy: 'network-only' },
   );
 
-  const otherMainContentRes = useQuery(
-    pagePreview.queries.GET_PAGE_PREVIEW_OTHER_CONTENT_FOR_MAIN_CONTENT,
-    { variables: { pageCmsId, locale }, fetchPolicy: 'network-only' },
+  const otherMainContentRes = await client.query({
+    query: pagePreview.queries.GET_PAGE_PREVIEW_OTHER_CONTENT_FOR_MAIN_CONTENT,
+    variables: { pageCmsId, locale }, fetchPolicy: 'network-only' },
   );
 
-  const otherSecondaryContentRes = useQuery(
-    pagePreview.queries.GET_PAGE_PREVIEW_OTHER_CONTENT_FOR_SECONDARY_CONTENT,
-    { variables: { pageCmsId, locale }, fetchPolicy: 'network-only' },
+  const otherSecondaryContentRes = await client.query({
+    query: pagePreview.queries.GET_PAGE_PREVIEW_OTHER_CONTENT_FOR_SECONDARY_CONTENT,
+    variables: { pageCmsId, locale }, fetchPolicy: 'network-only' },
   );
 
-  const pageConnectiveTissueBasicInfo = useQuery(
-    pagePreview.queries.GET_PAGE_CONNECTIVE_TISSUE_BASIC_INFO,
-    { variables: { pageCmsId, locale }, fetchPolicy: 'network-only' },
+  const pageConnectiveTissueBasicInfo = await client.query({
+    query: pagePreview.queries.GET_PAGE_CONNECTIVE_TISSUE_BASIC_INFO,
+    variables: { pageCmsId, locale }, fetchPolicy: 'network-only' },
   );
 
-  // image: page main content
-  const [mainContentImageQuery, {
-    data: mainContentImageData,
-    error: mainContentImageError,
-    loading: mainContentImageLoading,
-  }] = useLazyQuery(pagePreview.queries.GET_IMAGE_DATA);
-
-  const [otherMainContentImageQuery, {
-    data: otherMainContentImageData,
-    error: otherMainContentImageError,
-    loading: otherMainContentImageLoading,
-  }] = useLazyQuery(pagePreview.queries.GET_OTHER_CONTENT_FOR_IMAGE_DATA);
-  // End image: page main content
-
-  // image: page secondary content
-  const [secondaryContentImageQuery, {
-    data: secondaryContentImageData,
-    error: secondaryContentImageError,
-    loading: secondaryContentImageLoading,
-  }] = useLazyQuery(pagePreview.queries.GET_IMAGE_DATA);
-
-  const [otherSecondaryContentImageQuery, {
-    data: otherSecondaryContentImageData,
-    error: otherSecondaryContentImageError,
-    loading: otherSecondaryContentImageLoading,
-  }] = useLazyQuery(pagePreview.queries.GET_OTHER_CONTENT_FOR_IMAGE_DATA);
-  // End image: page secondary content
 
   // video: page main content
   const [mainContentVideoQuery, {
@@ -319,6 +288,7 @@ const usePageQuery = (pageCmsId, locale, client) => {
   }] = useLazyQuery(pagePreview.queries.GET_CONNECTIVE_TISSUE);
 
   // --------------------------------------------------------------------
+
   const isContentLoading = () => (
     mainContentRes.loading
     || mainContentResCard.loading
@@ -361,6 +331,7 @@ const usePageQuery = (pageCmsId, locale, client) => {
     || otherImageAssociatedContentError
   );
 
+  console.log({pageConnectiveTissueBasicInfo});
 
   if (!mainContentRes.loading && isEmpty(mainContentRes.error) && !isEmpty(mainContentRes.data)) {
     updateAssociatedContentIds(mainContentRes, 'mainContent');
@@ -405,6 +376,7 @@ const usePageQuery = (pageCmsId, locale, client) => {
       otherSecondaryContentVideoQuery({ variables: { videosReferenceCmsIds, locale } });
     }
   }
+
 
   if (!pageConnectiveTissueBasicInfo.loading && isEmpty(pageConnectiveTissueBasicInfo.error)) {
     const topConnectiveTissueConnection = pageConnectiveTissueBasicInfo.data.pagev4.top_connective_tissueConnection.edges;
@@ -531,19 +503,19 @@ const useCourseQueries = (
   levelOneCollectionCmsId,
   locale,
 ) => {
-  const courseRes = useQuery(
-    getCourseQuery(courseType),
-    { variables: { courseCmsId, locale }, fetchPolicy: 'network-only' },
+  const courseRes = client.query({
+    query: getCourseQuery(courseType),
+    variables: { courseCmsId, locale }, fetchPolicy: 'network-only' },
   );
 
-  const levelTwoCollectionRes = useQuery(
-    pagePreview.queries.GET_LEVEL_TWO_COLLECTION_WITH_BASIC_INFO,
-    { variables: { levelTwoCollectionCmsId, locale }, fetchPolicy: 'network-only' },
+  const levelTwoCollectionRes = client.query({
+    query: pagePreview.queries.GET_LEVEL_TWO_COLLECTION_WITH_BASIC_INFO,
+    variables: { levelTwoCollectionCmsId, locale }, fetchPolicy: 'network-only' },
   );
 
-  const levelOneCollectionRes = useQuery(
-    pagePreview.queries.GET_LEVEL_ONE_COLLECTION_WITH_BASIC_INFO,
-    { variables: { levelOneCollectionCmsId, locale }, fetchPolicy: 'network-only' },
+  const levelOneCollectionRes = client.query({
+    query: pagePreview.queries.GET_LEVEL_ONE_COLLECTION_WITH_BASIC_INFO,
+    variables: { levelOneCollectionCmsId, locale }, fetchPolicy: 'network-only' },
   );
 
   return {
@@ -556,6 +528,6 @@ const useCourseQueries = (
 };
 
 export {
-  usePageQuery,
+  getPageData,
   useCourseQueries,
 };
