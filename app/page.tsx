@@ -1,100 +1,92 @@
-import Image from "next/image";
-import styles from "./page.module.css";
-import  Layout from '../src/layout';
-import createApolloClient from "../apollo_client";
-
-import { getPageData } from '../src/PagePreview/pagePreviewQuery';
-
-
 import {
   Row,
   Col,
 } from 'react-bootstrap';
 
-export const getContries = (async () => {
+// export const getContries = (async () => {
 
-  const client = createApolloClient();
+//   const client = createApolloClient();
 
-  // const [getCardDetails, { data: cardData, error: cardError, loading: cardLoading }] = useLazyQuery(pagePreview.queries.GET_CARD_DETAILS);
+//   // const [getCardDetails, { data: cardData, error: cardError, loading: cardLoading }] = useLazyQuery(pagePreview.queries.GET_CARD_DETAILS);
 
-  const {
-    loading,
-    mainContentData,
-    mainContentResCardData,
-    secondaryContentData,
-    otherMainContentData,
-    otherSecondaryContentData,
-    pageConnectiveTissueBasicInfoData,
-    isTopConnectiveTissue,
-    isBottomConnectiveTissue,
-    topConnectiveTissueData,
-    bottomConnectiveTissueData,
-    secondaryContentVideoData,
-    secondaryContentImageData,
-    mainContentImageData,
-    mainContentVideoData,
-    otherSecondaryContentVideoData,
-    otherSecondaryContentImageData,
-    otherMainContentImageData,
-    otherMainContentVideoData,
+//   const {
+//     loading,
+//     mainContentData,
+//     mainContentResCardData,
+//     secondaryContentData,
+//     otherMainContentData,
+//     otherSecondaryContentData,
+//     pageConnectiveTissueBasicInfoData,
+//     isTopConnectiveTissue,
+//     isBottomConnectiveTissue,
+//     topConnectiveTissueData,
+//     bottomConnectiveTissueData,
+//     secondaryContentVideoData,
+//     secondaryContentImageData,
+//     mainContentImageData,
+//     mainContentVideoData,
+//     otherSecondaryContentVideoData,
+//     otherSecondaryContentImageData,
+//     otherMainContentImageData,
+//     otherMainContentVideoData,
 
-    cardVideoAssociatedContentData,
-    otherCardVideoAssociatedContentData,
-    cardImageAssociatedContentData,
-    otherCardImageAssociatedContentData,
+//     cardVideoAssociatedContentData,
+//     otherCardVideoAssociatedContentData,
+//     cardImageAssociatedContentData,
+//     otherCardImageAssociatedContentData,
 
-    videoAssociatedContentData,
-    otherVideoAssociatedContentData,
-    imageAssociatedContentData,
-    otherImageAssociatedContentData,
-    error,
-  } = getPageData('blt61c55c1b2a5c3042', 'en-us', client);
+//     videoAssociatedContentData,
+//     otherVideoAssociatedContentData,
+//     imageAssociatedContentData,
+//     otherImageAssociatedContentData,
+//     error,
+//   } = getPageData('blt61c55c1b2a5c3042', 'en-us', client);
 
 
-  return {loading,
-    mainContentData,
-    mainContentResCardData,
-    secondaryContentData,
-    otherMainContentData,
-    otherSecondaryContentData,
-    pageConnectiveTissueBasicInfoData,
-    isTopConnectiveTissue,
-    isBottomConnectiveTissue,
-    topConnectiveTissueData,
-    bottomConnectiveTissueData,
-    secondaryContentVideoData,
-    secondaryContentImageData,
-    mainContentImageData,
-    mainContentVideoData,
-    otherSecondaryContentVideoData,
-    otherSecondaryContentImageData,
-    otherMainContentImageData,
-    otherMainContentVideoData,
+//   return {loading,
+//     mainContentData,
+//     mainContentResCardData,
+//     secondaryContentData,
+//     otherMainContentData,
+//     otherSecondaryContentData,
+//     pageConnectiveTissueBasicInfoData,
+//     isTopConnectiveTissue,
+//     isBottomConnectiveTissue,
+//     topConnectiveTissueData,
+//     bottomConnectiveTissueData,
+//     secondaryContentVideoData,
+//     secondaryContentImageData,
+//     mainContentImageData,
+//     mainContentVideoData,
+//     otherSecondaryContentVideoData,
+//     otherSecondaryContentImageData,
+//     otherMainContentImageData,
+//     otherMainContentVideoData,
 
-    cardVideoAssociatedContentData,
-    otherCardVideoAssociatedContentData,
-    cardImageAssociatedContentData,
-    otherCardImageAssociatedContentData,
+//     cardVideoAssociatedContentData,
+//     otherCardVideoAssociatedContentData,
+//     cardImageAssociatedContentData,
+//     otherCardImageAssociatedContentData,
 
-    videoAssociatedContentData,
-    otherVideoAssociatedContentData,
-    imageAssociatedContentData,
-    otherImageAssociatedContentData,
-    error
-  }
-})
+//     videoAssociatedContentData,
+//     otherVideoAssociatedContentData,
+//     imageAssociatedContentData,
+//     otherImageAssociatedContentData,
+//     error
+//   }
+// })
 
 export default async function Home() {
-  const data = await getContries();
+  // const data = await getContries();
 
   return (
     <Row className="mx-0" style={{ backgroundColor: '#cbd5e0', minHeight: '100vh' }}>
       <Col className="px-0">
         <div id="custom-prompt" />
-        <Layout>
+        {/* <Layout> */}
           <h1> Hello</h1>
-          {JSON.stringify(data, undefined, 2)}
-        </Layout>
+          {/* {JSON.stringify(data, undefined, 2)} */}
+        {/* </Layout> */}
       </Col>
     </Row>
   );

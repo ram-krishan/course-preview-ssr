@@ -1,0 +1,387 @@
+.learn-container {
+  .earning-points {
+    position: relative;
+
+    strong {
+      position: absolute;
+      right: 0;
+      top: -26px;
+      font-size: 14px;
+    }
+  }
+
+  .current-topic-heading {
+    font-size: 22px;
+    color: #000000;
+    font-weight: 600;
+    letter-spacing: -0.5px;
+  }
+
+  .middle-txt-style {
+    font-size: 28px;
+    line-height: 31px;
+  }
+
+  .small-txt-style {
+    color: #9B9B9B;
+    font-size: 12px;
+  }
+
+  .completed-course-panel {
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: -0.41px;
+  }
+
+  .full-view-icon {
+    font-size: 22px;
+    color: #4E1E8F;
+  }
+
+  .full-view-txt {
+    font-size: 14px;
+    color: #000000;
+  }
+
+  .course-block {
+    .course-description {
+      color: #2C2E2F;
+      font-size: 14px !important;
+    }
+  }
+
+  .lesson-no-indication {
+    color: #9B9B9B;
+    font-size: 18px;
+  }
+
+  .resources-block {
+    border-radius: 2px;
+    background-color: #FFFFFF;
+    box-shadow: 0 2px 25px 8px #EDE9E7;
+    margin-top: 2em !important;
+    position: relative;
+    padding-left: 0.5em;
+    padding-bottom: 2em;
+
+    .course-block-heading {
+      font-size: 18px;
+      color: #000000;
+    }
+
+    .small_fontsize {
+      font-weight: 300;
+      color: #5388B9 !important;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      box-sizing: border-box;
+      width: 9px;
+      border: 1px solid #E8E8E8;
+      border-radius: 19px;
+      background-color: #B97582;
+      box-shadow: 0 2px 99px 8px #EDE9E7;
+    }
+  }
+
+  .course-card-desc {
+    line-height: 15px;
+  }
+
+  .jump-btn {
+    border-radius: 30px;
+    background: #5388B9;
+    border-color: #5388B9;
+
+    &:hover,
+    &:focus,
+    &:active {
+      opacity: 0.8;
+      background-color: #5388B9 !important;
+      border-color: #5388B9 !important;
+    }
+  }
+
+  .course-img {
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 25px 52px 15px rgba(0, 0, 0, 0.19);
+  }
+
+  .content-part {
+    padding-left: 2em;
+  }
+
+  .course-small-img {
+    max-width: 100%;
+    max-height: 100%;
+    width: 100%;
+  }
+
+  .recommended-heading {
+    font-size: 18px;
+    color: #2C2E2F;
+    margin-bottom: 1.5em;
+    font-weight: 300;
+  }
+
+  .course-heading {
+    text-transform: uppercase;
+    font-size: 12px;
+    color: #21154A;
+    font-weight: 400;
+    margin: 1.3em 0;
+  }
+
+  .course-title {
+    color: #2C2E2F;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 0;
+    line-height: 24px;
+  }
+
+  .estimated-time {
+    color: #21154A;
+    font-size: 12px;
+    font-weight: 300;
+    letter-spacing: 0;
+    line-height: 17px;
+    margin-top: 2em;
+  }
+
+  .view-course-link {
+    color: #5388B9;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: -1px;
+    line-height: 25px;
+  }
+
+  .view-course-index-btn {
+    padding: 6px 15px;
+    border: 2px solid;
+    font-family: 'Open Sans';
+    font-weight: 600;
+    line-height: 20px;
+  }
+
+  .content-rectangle {
+    padding: 6px 15px;
+    box-sizing: border-box;
+    border: 5px solid #D20000;
+  }
+}
+
+.lessons-list {
+  margin-bottom: 0;
+
+  li {
+    color: #2c2e2f;
+    font-size: 17px;
+    font-weight: 500;
+    letter-spacing: -0.45px;
+    line-height: 27px;
+    padding: 11px 0;
+
+    .jump-to-link {
+      color: #5388B9;
+      font-family: "Open Sans";
+      font-size: 20px;
+      font-weight: 600;
+      letter-spacing: -0.89px;
+      line-height: 22px;
+
+      svg {
+        width: 7px !important;
+        box-shadow: none;
+        margin-left: 6px;
+        height: auto;
+      }
+
+      span {
+        font-size: 11px;
+        margin-left: 10px;
+      }
+    }
+
+    svg {
+      width: 23px;
+      margin-right: 12px;
+    }
+  }
+
+  .locked-link {
+    color: #CCCCCC;
+    font-size: 20px;
+    letter-spacing: -0.89px;
+    line-height: 23px;
+  }
+}
+
+.learn-list-item {
+  svg {
+    width: 23px;
+    margin-right: 14px;
+  }
+
+  .jump-to-link {
+    color: #5388b9;
+    font-size: 15px;
+    font-weight: bold;
+    text-transform: capitalize;
+    display: flex;
+    align-items: center;
+
+    svg {
+      width: 7px !important;
+      box-shadow: none;
+      margin-left: 6px;
+      height: auto;
+    }
+
+    span {
+      font-size: 11px;
+      margin-left: 10px;
+    }
+  }
+
+  .current-item {
+    svg {
+      width: 28px !important;
+      box-shadow: 0 2px 22px 5px rgba(83, 136, 185, 0.38);
+      border-radius: 100%;
+      height: 28px;
+    }
+
+    .current-item-label {
+      display: inline-flex;
+    }
+  }
+}
+.course-wp{
+  .lesson-container{
+    transition: 0.3s all;
+  }
+}
+.course-index-content{
+  max-height: 94vh;
+  flex: 300px 1 0;
+  background: #FFFFFF;
+  box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.08);
+  position: sticky;
+  top: 62px;
+  flex-grow: 0;
+  flex-shrink: 0;
+  .course-syllabus-scroller{
+    overflow: hidden;
+    word-break: break-word;
+    max-height: calc(90vh - 55px);
+  }
+  &.course-syllabus-collapsed{
+    max-width: 53px;
+    & div:nth-child(2){
+      opacity: 0;
+    }
+  }
+  .scroll-body{
+    height: calc(100% - 55px);
+    width: 100%;
+  }
+}
+
+.course-syllabus-toggle-btn{
+  padding: 0px;
+  z-index: 1;
+  background-color: #fff;
+  border: 0;
+  position: relative;
+  margin-top: 10px;
+  left: 0.5em;
+  &:focus{
+    color: #000000;
+    box-shadow: none;
+  }
+  .collapse-icon{
+    color: #000000;
+    font-size: 30px;
+  }
+}
+
+.lesson-wp{
+  flex-basis: calc(100% - 300px);
+  padding-right: 15px;
+  flex-grow: 1;
+  flex-shrink: 0;
+  max-width: calc(100% - 300px);
+  &.syllabus-collapsed-view{
+    max-width: 100%;
+  }
+}
+.to-do-next-heading{
+  h5{
+    color: #24124D;
+  }
+}
+.to-do-next-card-text{
+  height: calc( 100% - 130px)
+}
+.to-do-next-sub-heading, .to-do-next-card-text, .you-learned {
+  color: #24124D;
+}
+.to-do-next-sub-heading {
+  font-size: 18px;
+  font-weight: 600;
+}
+.level-two-break-card .level-two-break-button, .level-two-break-card .level-two-break-button:hover, .level-two-break-card .level-two-break-button:focus, .level-two-break-card .level-two-break-button:active {
+  background-color: #24124D !important;
+  border-color: #24124D !important;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+.level-two-break-card {
+  border-radius: 8px;
+  box-shadow: 0px 0px 8px 5px #ece8e8;
+}
+.you-learned-text {
+  font-size: 14px;
+  line-height: 25px;
+}
+.level-two-break-points {
+  background-color: #24124D;
+  color: #e7e7e7;
+  border-radius: 8px 8px 0px 0px;
+}
+.custom-height{
+  height: calc(100% - 40px);
+}
+.level-two-collection-details{
+  p{
+    font-weight: 300;
+    font-size: 24px;
+    letter-spacing: 0.15px;
+    color: #FFFFFF;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+  h3{
+    font-weight: 300;
+    font-size: 34px;
+    letter-spacing: 0.25px;
+    color: #FFFFFF;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+  .activity-point-text{
+    font-weight: 300;
+    font-size: 18px;
+    letter-spacing: 0.15px;
+    color: #FFFFFF;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+  text-align: center;
+}

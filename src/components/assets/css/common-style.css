@@ -1,0 +1,100 @@
+.min-height-75vh{
+  min-height: 75vh;
+}
+.content-container{
+  position: relative;
+  min-height: 75vh;
+  padding-bottom: 1em !important;
+}
+
+/*----------confirm modal styles-----------*/
+.confirm-modal .modal-content{
+    text-align: center;
+    padding: 15px;
+    font-family: "Open Sans";
+  }
+.confirm-modal .modal-content .top-title{
+  color: #000000;
+  font-size: 25px;
+  font-weight: bold;
+  letter-spacing: -1.25px;
+  line-height: 38px;
+  text-align: center;
+  margin-top: 0.5em;
+}
+.confirm-modal .modal-content .inner-txt{
+  color: #000000;
+  font-size: 15px;
+  letter-spacing: 0.01px;
+  line-height: 30px;
+  text-align: center;
+  margin-top: 1em;
+}
+.confirm-modal .modal-content .light-txt{
+  color: #9B9B9B;
+  font-size: 15px;
+  letter-spacing: 0.01px;
+  line-height: 26px;
+  text-align: center;
+  max-width: 80%;
+  margin: 0 auto;
+}
+.confirm-modal .modal-content .action-btns{
+  width: 100%;
+  font-size: 13px;
+  font-weight: 600;
+}
+.confirm-modal .modal-content .leave-btn{
+  min-width: 100px;
+  color: #FFFFFF;
+  font-size: 13px;
+  font-weight: 600;
+  text-align: center;
+}
+.confirm-modal .modal-content .action-btns.cancel-btn{
+  background: transparent;
+  border: 0;
+  color: #21154A;
+  font-family: "Open Sans";
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 0.01px;
+  line-height: 30px;
+  text-align: center;
+  display: inline-block;
+  width: 100px;
+  margin-top: 0.5em;
+}
+.confirm-modal .modal-content .action-btns.cancel-btn:hover, 
+.confirm-modal .modal-content .action-btns.cancel-btn:focus, 
+.confirm-modal .modal-content .action-btns.cancel-btn:active{
+  background: transparent;
+  border: 0;
+  box-shadow: none !important;
+}
+.confirm-modal .modal-content .action-btns.cancel-btn:hover, 
+.confirm-modal .modal-content .action-btns.cancel-btn:focus, 
+.confirm-modal .modal-content .action-btns.cancel-btn:active{
+  color: #585858;
+}
+.confirm-modal .modal-body{
+  padding: 25px;
+  text-align: center;
+}
+
+@media (min-width: 1600px){
+  .container, .container-lg, .container-md, .container-sm {
+    max-width: 1600px;
+  }
+}
+
+@media (max-width: 1599px){
+  .container, .container-lg, .container-md, .container-sm, .container-xl {
+    max-width: 100%;
+  }
+}
+
+.error-fallback-btn{
+  display: block;
+  margin: auto;
+}

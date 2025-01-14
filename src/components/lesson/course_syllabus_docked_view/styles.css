@@ -1,0 +1,4 @@
+.course-index-page-container .accordion>.card {
+  overflow: visible;
+  box-shadow: none;
+}

@@ -1,0 +1,137 @@
+.back-btn {
+  padding: 14px 20px;
+  color: #909090;
+  border-color: #848484;
+}
+.body-container {
+  border-radius: 8px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px 0 rgba(40, 41, 61, 0.04),
+    0 8px 16px 0 rgba(96, 97, 112, 0.16);
+}
+.already-taken-text {
+  color: #2c2e2f;
+  font-family: "Open Sans";
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: -0.5px;
+  line-height: 30px;
+  text-align: center;
+}
+.next-below-to-review {
+  color: #000000;
+  font-size: 14px;
+  letter-spacing: 0;
+  line-height: 21px;
+  text-align: center;
+}
+
+.topic-label-styles {
+  color: #000000;
+  font-family: "Open Sans";
+  font-size: 60px;
+  font-weight: bold;
+  letter-spacing: -2.68px;
+  line-height: 71px;
+}
+.topic-title {
+  color: #9b9b9b;
+  font-family: "Open Sans";
+  font-size: 18px !important;
+  letter-spacing: -0.41px;
+  line-height: 24px;
+}
+.lesson-heading {
+  color: #000000;
+  font-family: "Open Sans";
+  font-size: 32px;
+  font-weight: 600;
+  letter-spacing: -0.73px;
+  line-height: 43px;
+  margin-bottom: 0;
+}
+.course-title {
+  color: #000000;
+  font-family: "Open Sans";
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: -0.5px;
+  line-height: 30px;
+}
+.progress-bar {
+  height: 3px;
+}
+
+.questions-complete-text {
+  display: flex;
+  justify-content: flex-end;
+  font-size: small;
+  color: #909090;
+}
+.continue-btn {
+  font-size: 12px;
+  background-color: #767676;
+}
+.begin-btn {
+  font-size: 12px;
+  background-color: #767676;
+}
+.question-text {
+  font-weight: 600;
+}
+.complete-status {
+  font-size: 14px;
+  font-weight: 500;
+}
+.previous-btn {
+  color: #9a9a9a;
+  cursor: pointer;
+}
+.pointer-none {
+  pointer-events: none;
+}
+.f-12 {
+  font-size: 12px;
+}
+.previous-next-block-container {
+  margin-top: 150px;
+}
+
+.begin-page-para-container {
+  width: 70%;
+  margin: 0 auto;
+  font-size: 15px;
+}
+.exam-progress-bar-hint {
+  font-size: small;
+  color: #909090;
+}
+.next-prev-btn{
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.15px;
+  text-transform: uppercase;
+  width: 129px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 5px !important;
+  svg{
+    width: 15px;
+  }
+  &.prev-btn{
+    svg{
+      margin-right: 4px;
+    }
+  }
+  &.next-btn{
+    svg{
+      margin-left: 4px;
+    }
+  }
+}
+.practice-text{
+  padding-left: 1em;
+  color: #21154A;
+}

@@ -1,0 +1,121 @@
+{
+  "title": "Course Name - Heading",
+  "id": "1",
+  "category": "Category Name",
+  "questions": [
+    {
+      "id": "52",
+      "lessons": [
+        {
+          "id": "1",
+          "title": "Lesson 1",
+          "status": "open",
+          "__typename": "Lesson"
+        },
+        {
+          "id": "2",
+          "title": "Lesson 2",
+          "status": "completed",
+          "__typename": "Lesson"
+        }
+      ],
+      "modularBlock": {
+        "type": "QuestionsModularBlocksVideoQuestion",
+        "title": "46481.mp4",
+        "fileUrl": "http://assets.contentstack.io/v3/assets/bltcbfe7dd36dc5e4e6/blt7338f45f50fc8913/5fa3ecf2fd99385ff6002ae8/46481.mp4",
+        "contentType": "video/mp4",
+        "__typename": "VideoQuestion"
+      },
+      "title": "Engineering Test - Test-Q4",
+      "question": "What is the correct answer?",
+      "correctAnswer": [
+        {"id": "44"},
+        {"id": "43"},
+        {"id": "45"}
+      ],
+      "lessonQuestionSubmittedAnswer": null,
+      "status": "open",
+      "isTextOrVedioPresent": true,
+      "isMultipleChoiceQuestion": true,
+      "answers": [
+        {
+          "id": "44",
+          "title": "Clearly, departmental reporting is important to you, and I respect that.",
+          "feedback": "Mira neutrally acknowledges the customer. She phrases her statement to be nonjudgmental and does not agree, disagree, or apologize.",
+          "weight": 4,
+          "__typename": "Answer"
+        },
+        {
+          "id": "43",
+          "title": "Clearly, departmental reporting is important to you, and I respect that.",
+          "feedback": "Mira neutrally acknowledges the customer. She phrases her statement to be nonjudgmental and does not agree, disagree, or apologize.",
+          "weight": 2,
+          "__typename": "Answer"
+        },
+        {
+          "id": "45",
+          "title": "Clearly, departmental reporting is important to you, and I respect that.",
+          "feedback": "Mira neutrally acknowledges the customer. She phrases her statement to be nonjudgmental and does not agree, disagree, or apologize.",
+          "weight": 3,
+          "__typename": "Answer"
+        },
+        {
+          "id": "46",
+          "title": "Clearly, departmental reporting is important to you, and I respect that.",
+          "feedback": "Mira neutrally acknowledges the customer. She phrases her statement to be nonjudgmental and does not agree, disagree, or apologize.",
+          "weight": 1,
+          "__typename": "Answer"
+        }
+      ],
+      "__typename": "Question"
+    },
+    {
+      "id": "521",
+      "modularBlock": {
+        "type": "QuestionsModularBlocksVideoQuestion",
+        "title": "46481.mp4",
+        "fileUrl": "http://assets.contentstack.io/v3/assets/bltcbfe7dd36dc5e4e6/blt7338f45f50fc8913/5fa3ecf2fd99385ff6002ae8/46481.mp4",
+        "contentType": "video/mp4",
+        "__typename": "VideoQuestion"
+      },
+      "title": "Engineering Test - Test-Q4",
+      "question": "What is the correct answer?",
+      "correctAnswer": "blta0870afedc7b541c",
+      "lessonQuestionSubmittedAnswer": null,
+      "status": "open",
+      "isTextOrVedioPresent": false,
+      "isMultipleChoiceQuestion": false,
+      "answers": [
+        {
+          "id": "44",
+          "title": "Clearly, departmental reporting is important to you, and I respect that.",
+          "feedback": "Mira neutrally acknowledges the customer. She phrases her statement to be nonjudgmental and does not agree, disagree, or apologize.",
+          "weight": 4,
+          "__typename": "Answer"
+        },
+        {
+          "id": "43",
+          "title": "Clearly, departmental reporting is important to you, and I respect that.",
+          "feedback": "Mira neutrally acknowledges the customer. She phrases her statement to be nonjudgmental and does not agree, disagree, or apologize.",
+          "weight": 2,
+          "__typename": "Answer"
+        },
+        {
+          "id": "45",
+          "title": "Clearly, departmental reporting is important to you, and I respect that.",
+          "feedback": "Mira neutrally acknowledges the customer. She phrases her statement to be nonjudgmental and does not agree, disagree, or apologize.",
+          "weight": 3,
+          "__typename": "Answer"
+        },
+        {
+          "id": "46",
+          "title": "Clearly, departmental reporting is important to you, and I respect that.",
+          "feedback": "Mira neutrally acknowledges the customer. She phrases her statement to be nonjudgmental and does not agree, disagree, or apologize.",
+          "weight": 1,
+          "__typename": "Answer"
+        }
+      ],
+      "__typename": "Question"
+    }
+  ]
+}

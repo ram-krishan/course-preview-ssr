@@ -1,0 +1,130 @@
+.practice-heading {
+  color: #000000;
+  font-family: "Open Sans";
+  font-size: 44px;
+  font-weight: 300;
+  letter-spacing: -2.68px;
+  line-height: 71px;
+}
+
+.course-heading {
+  color: #000000;
+  font-family: "Open Sans";
+  font-size: 32px;
+  font-weight: 600;
+  letter-spacing: -0.73px;
+  line-height: 43px;
+}
+
+.category-heading {
+  color: #000000;
+  font-family: "Open Sans";
+  font-size: 22px;
+  font-weight: 300;
+  letter-spacing: -0.5px;
+  line-height: 30px;
+}
+
+.main-container-body {
+  width: 100%;
+  background-color: #ffffff;
+  box-shadow: 0 2px 38px 8px #ede9e7;
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 10px !important;
+  border-radius: 8px;
+}
+
+.no-question {
+  color: #9b9b9b;
+  font-family: "Open Sans";
+  font-size: 19px;
+  font-weight: 600;
+  letter-spacing: -0.54px;
+  line-height: 28px;
+  text-align: right;
+}
+
+.question-text {
+  color: #000000;
+  font-family: "Open Sans";
+  font-size: 35px;
+  font-weight: 400;
+  letter-spacing: -1.56px;
+  line-height: 47px;
+}
+
+.feedback-btn {
+  box-sizing: border-box;
+  border: 2px solid #21154a !important;
+  border-radius: 25px;
+  background-color: #21154a !important;
+  margin-right: 20px;
+}
+.leave-practice-btn {
+  box-sizing: border-box;
+  border: 2px solid #21154a;
+  border-radius: 25px;
+  background-color: #ffffff !important;
+  color: #21154a !important;
+  font-family: "Open Sans";
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  letter-spacing: 0;
+  line-height: 20px;
+  text-align: center;
+}
+.next-btn {
+  padding: 10px 30px !important;
+}
+.card-block {
+  height: 124px;
+  width: 124px;
+}
+.wrapper-main-body {
+  width: 120px;
+  text-align: center;
+}
+
+.wrapper-text-no {
+  color: #2c2e2f;
+  font-family: "Open Sans";
+  font-size: 40px;
+  font-weight: 300;
+  letter-spacing: 0;
+  line-height: 55px;
+  text-align: center;
+}
+.wrapper-label {
+  color: #2c2e2f;
+  font-family: "Open Sans";
+  font-size: 18px;
+  font-weight: 300;
+  letter-spacing: -0.41px;
+  line-height: 24px;
+  text-align: center;
+}
+
+.video-player-container {
+  & > div > div{
+    border-radius: 20px;
+    background-color: #000000;
+    box-shadow: 0 25px 52px 15px rgba(0,0,0,0.19);
+  }
+}
+
+.practice-question-page-tooltip{
+  background-color: #FFFFFF;
+  box-shadow: 0 2px 30px 8px #EDE9E7;
+  font-size: 14px;
+  font-weight: 600;
+  text-align: center;
+  border: 0px;
+  .popover-body {
+    color: #777777;
+  }
+}
+
+.popover-txt {
+  color: #777777;
+}

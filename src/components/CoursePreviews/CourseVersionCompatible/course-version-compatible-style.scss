@@ -1,0 +1,53 @@
+.compatibility-check-section{
+  padding: 30px;
+  margin-top: 20px;
+
+  .mt-20{
+    margin-top: 20px;
+  }
+  .ml-10{
+    margin-left: 10px;
+  }
+}
+
+.process-status-section{
+  position: relative;
+  left: 15px;
+}
+
+.validation-status-section{
+  position: relative;
+  left: 15px;
+  margin-top: 14px;
+}
+
+.badge-style{
+  height: 20px;
+  top: 3px;
+  position: relative;
+}
+
+.validation-status-valid-text{
+  position: relative;
+  top: 1px;
+}
+
+.validation-status-invalid-text{
+  position: relative;
+  top: 2px;
+}
+
+.input-group .search-cross-button{
+  position: absolute;
+  right: 20%;
+  z-index: 999;
+  background-color: transparent;
+  padding: 0;
+  height: 0;
+  top: 6px;
+  border: 0;
+}
+
+.publish-requested-select-section{
+  bottom: 2rem;
+}

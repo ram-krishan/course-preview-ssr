@@ -1,0 +1,31 @@
+Today's Update | 27th December 2021
++ https://spi-engineering.atlassian.net/browse/VIB-3496
++ Write react code coverage for Assessment (Assessment Question/Answer page )
++ PR: https://github.com/SalesPerformanceInt/vib/pull/2597
+[Status: Done]
++ https://spi-engineering.atlassian.net/browse/VIB-3648
++ Admin Site - Import User Feature unexpected behavior - no error message/no success message on import and users not imported
+  + Coordination with harshdeep to fix loader UI issue
++ PR: https://github.com/SalesPerformanceInt/vib/pull/2689
++ https://spi-engineering.atlassian.net/browse/VIB-3497
++ Write react code coverage for Assessment (Result page)
++ [Status: In-progress]
+
+Today's Update | 28th December 2021
++ https://spi-engineering.atlassian.net/browse/VIB-3496
++ Write react code coverage for Assessment (Assessment Question/Answer page )
+  + Working to fix Bug related to overlapping of dot value
+[Status: In-progress]
++ https://spi-engineering.atlassian.net/browse/VIB-3497
++ Write react code coverage for Assessment (Result page)
+[Status: In-progress]
+
+
+Today's Update | Dec 30, 2021
++ https://spi-engineering.atlassian.net/browse/VIB-3496
++ Write react code coverage for Assessment (Assessment Question/Answer page )
+  + Working to fix bugs
+[Status: In-progress]
++ https://spi-engineering.atlassian.net/browse/VIB-3497
++ Write react code coverage for Assessment (Result page)
+[Status: In-progress]

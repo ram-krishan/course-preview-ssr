@@ -1,0 +1,160 @@
+.heading-container .ready-text {
+  font-size: 18px;
+  color: #9b9b9b;
+}
+.heading-container .sub-heading-text {
+  color: #000000;
+  font-family: "Open Sans";
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: -0.5px;
+  line-height: 30px;
+  text-transform: none;
+}
+
+.training-goals-container .goals-heading-text {
+  color: #000000;
+  font-family: "Open Sans";
+  font-size: 35px;
+  font-weight: bold;
+  letter-spacing: -1.56px;
+  line-height: 47px;
+}
+.caption-txt {
+  font-size: 12px;
+  font-style: italic;
+  color: #757575;
+  padding: 1.5em 0 0.5em;
+}
+
+.org-left-container img.figure-img {
+  margin-top: 20px;
+  width: 100%;
+}
+.org-right-container .goals-heading-text {
+  color: #000000;
+  font-family: "Open Sans";
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: -0.89px;
+  line-height: 27px;
+  margin-top: 100px;
+  text-align: center;
+}
+.option-container ul li {
+  border: 1px solid #979797;
+  border-radius: 7px;
+  background-color: #ebebeb;
+  list-style: none;
+  color: #000000;
+  font-size: 18px;
+  font-weight: 600;
+  margin: 14px 0px;
+  padding: 10px 15px;
+}
+
+.only-goals-container {
+  max-width: 75%;
+  margin: 0 auto;
+}
+
+.bottom-description {
+  color: #000000;
+  font-family: "Open Sans";
+  font-size: 18px;
+  line-height: 24px;
+  color: #000000;
+  letter-spacing: -0.8px;
+}
+
+.button-continue {
+  background: #21154A !important;
+  &:hover {
+    background-color: #21154A !important;
+  }
+}
+.video-player-container > div > div {
+  width: 100%;
+  border-radius: 20px;
+  background-color: #000000;
+  box-shadow: 0 25px 52px 15px rgba(0,0,0,0.19);
+}
+
+.option-container{
+  font-size: 17px;
+  font-weight: 600;
+  letter-spacing: -0.41px;
+  line-height: 24px;
+}
+  .selected-options-container .inner-selected-goal {
+  color: #000000;
+  letter-spacing: -0.5px;
+  line-height: 30px;
+  font-size: 22px;
+  font-weight: 600;
+}
+.inner-selected-and-goal {
+  color: #000000;
+  letter-spacing: -0.5px;
+  line-height: 30px;
+  font-size: 22px;
+  font-weight: 400;
+}
+.btm-right-description {
+  color: #000000;
+  font-size: 18px;
+  letter-spacing: -0.8px;
+  line-height: 24px;
+}
+
+.senior-leader-message-container {
+  padding-bottom: 4em !important;
+}
+
+.select-goal-success-message {
+  border: none;
+  border-radius: 4px;
+  background-color: #E9F5EC;
+
+  .success-message {
+    height: 30.26px;
+    width: 154px;
+    color: #2C2E2F;
+    font-family: "Open Sans";
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 0;
+    line-height: 22px;
+
+    span:nth-child(2){
+      position: relative;
+      left: 5px;
+      height: 30.26px;
+      width: 222.62px;
+      color: #2C2E2F;
+      font-family: "Open Sans";
+      font-size: 16px;
+      letter-spacing: 0;
+      line-height: 17px;
+    }
+  }
+  .success-message-icon {
+    svg {
+      height: 32px;
+      width: 32px;
+      margin-right: 10px;
+      fill: #349D48;
+    }
+  }
+
+  button span {
+    font-size: 18px;
+    color: #000000;
+  }
+}
+
+.continue-btn {
+  padding: 12px 35px;
+  font-size: 14px;
+  font-weight: 600;
+}

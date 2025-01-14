@@ -2,6 +2,10 @@ import type { Metadata } from "next";
 import "./globals.css";
 import  "bootstrap/dist/css/bootstrap.min.css"
 // import './open_sans_font.module.scss';
+import * as Locale from '../src/locales';
+
+
+const getTranslationsFor = () => Locale.en;
 
 
 export const metadata: Metadata = {
