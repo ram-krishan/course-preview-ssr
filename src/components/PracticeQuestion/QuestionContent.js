@@ -2,7 +2,7 @@ import React from 'react';
 import classNames from 'classnames';
 import { Row, Col } from 'react-bootstrap';
 import PropTypes from 'prop-types';
-import { FormattedMessage } from 'react-intl';
+
 import styles from './practice-page.module.scss';
 import VideoAssociatedContentWrapper from '../lesson/shared/VideoAssociatedContentWrapper';
 import { useVideoSubTitles } from '../shared/hooks/useVideoSubtitles';
@@ -37,7 +37,7 @@ const QuestionContent = ({ question, currentQuestionIndex, noOfQuestion }) => {
         </Col>
         <Col sm={2}>
           <span data-testid="no-question" className={classNames(styles['no-question'])}>
-            <FormattedMessage id="practicePage.heading.questionsOutOfTotalQuestions" values={{ currentQuestionIndex, noOfQuestion }} />
+            <h1 id="practicePage.heading.questionsOutOfTotalQuestions" values={{ currentQuestionIndex, noOfQuestion }} />
           </span>
         </Col>
       </Row>

@@ -1,4 +1,4 @@
-import { FormattedMessage } from 'react-intl';
+
 import "./components/assets/css/common-style.css";
 import AlertMessage from './components/shared/AlertMessage';
 import * as Locale from './locales';
@@ -53,11 +53,11 @@ const ErrorFallbackPage = () => {
         <AlertMessage
           alertType="danger"
           customClass="m-3"
-          message= {<FormattedMessage id="errFallbackPage.alert.message"/>}
+          message= {<h1 id="errFallbackPage.alert.message"/>}
         />
         {isHomePage? null : (
           <button className='btn btn-primary error-fallback-btn' onClick={handleClick}>
-            <FormattedMessage id="errorFallbackPage.btn.goBack" />
+            <h1 id="errorFallbackPage.btn.goBack" />
           </button>
         )}
       </div>

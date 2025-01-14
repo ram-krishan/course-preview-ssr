@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import * as Bootstrap from 'react-bootstrap';
-import { FormattedMessage } from 'react-intl';
+
 import styles from './question.module.scss';
 import './style.scss';
 
@@ -18,7 +18,7 @@ const ProgressBar = ({
 }) => (
   <div>
     <div className={classNames(styles['questions-complete-text'], 'mb-1')}>
-      <FormattedMessage
+      <h1
         id="course.exam.progressBar.questionCompleteMessage"
         values={{
           currentQuestionPosition: position,
@@ -34,7 +34,7 @@ const ProgressBar = ({
 
     {isBeginExamPage ? (
       <div data-testid="description" className={classNames(styles['exam-progress-bar-hint'], 'd-flex mt-1')}>
-        <FormattedMessage id="course.exam.progressBar.examTimeDescription" />
+        <h1 id="course.exam.progressBar.examTimeDescription" />
       </div>
     ) : null}
   </div>

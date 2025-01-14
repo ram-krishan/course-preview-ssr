@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import Loader from '../../shared/Loader';
-import { FormattedMessage } from 'react-intl';
+
 import Alert from 'react-bootstrap/Alert';
 import WarningAlertIcon from '../../assets/images/warning_alert_icon.png'
 import ProgressBar from 'react-bootstrap/ProgressBar'
@@ -35,7 +35,7 @@ const CourseValidateData = ({
           src={WarningAlertIcon}
         />
         <span className="alert-banner-style">
-          <FormattedMessage
+          <h1
             id="coursePreview.validateData.api.processed"
             values={{
               courseName: selectedCourse.label}}

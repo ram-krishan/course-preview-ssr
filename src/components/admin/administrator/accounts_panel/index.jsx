@@ -192,7 +192,7 @@ const AccountsPanel = ({
 
         {isEmpty(accountsList) ? (
           <div className="mt-4 text-center">
-            <FormattedMessage id="admin.users.accountTable.noData" />
+            <h1 id="admin.users.accountTable.noData" />
           </div>
         ) : (
           <div>

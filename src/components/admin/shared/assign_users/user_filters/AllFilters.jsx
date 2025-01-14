@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { FormattedMessage } from 'react-intl';
+
 import {Row, Col} from 'react-bootstrap';
 import SpiSelect from '../../../../shared/select_boxes/SpiSelect';
 
@@ -36,7 +36,7 @@ const AllFilters = ({
     <Row className="navbar-form">
       <Col xl={3}>
         <TreeSelectField
-          placeholder={<FormattedMessage id="admin.shared.assignUsersPopup.filters.selectOrganizationalGroups" />}
+          placeholder={<h1 id="admin.shared.assignUsersPopup.filters.selectOrganizationalGroups" />}
           treeData={organizationalGroupSelectOptions}
           isNoneOption={isNoneOption}
           selectedValues={selectedOrganizationalGroups}
@@ -45,7 +45,7 @@ const AllFilters = ({
       </Col>
       <Col xl={3}>
         <TreeSelectField
-          placeholder={<FormattedMessage id="admin.shared.assignUsersPopup.filters.selectTerritories" />}
+          placeholder={<h1 id="admin.shared.assignUsersPopup.filters.selectTerritories" />}
           treeData={territorySelectOptions}
           isNoneOption={isNoneOption}
           selectedValues={selectedTerritories}
@@ -63,7 +63,7 @@ const AllFilters = ({
       </Col>
       <Col xl={3}>
         <MultiSelectField
-          placeholder={<FormattedMessage id="admin.shared.assignUsersPopup.filters.selectUserGroups" />}
+          placeholder={<h1 id="admin.shared.assignUsersPopup.filters.selectUserGroups" />}
           isNoneOption={isNoneOption}
           selectBoxOptions={userGroupSelectOptions}
           selectedValues={selectedUserGroups}

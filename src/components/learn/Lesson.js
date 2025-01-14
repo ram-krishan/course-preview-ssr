@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import { FormattedMessage } from 'react-intl';
+
 import { useMutation } from '@apollo/react-hooks';
 import { Link, useHistory } from 'react-router-dom';
 
@@ -65,7 +65,7 @@ const Lesson = ({
       isLoading={loading}
     >
 
-      <FormattedMessage id="button.start" />
+      <h1 id="button.start" />
     </VibButton>
   );
 
@@ -88,7 +88,7 @@ const Lesson = ({
       )}
       onClick={trackUserActivityLog}
     >
-      <FormattedMessage id="button.nextActivity" />
+      <h1 id="button.nextActivity" />
     </Link>
   );
 
@@ -116,7 +116,7 @@ const Lesson = ({
       >
         <div>
           <span className={styles['lesson-no-indication']} data-testid="total-lesson-indication">
-            <FormattedMessage
+            <h1
               id="label.courseIndex.levelOneCollectionCompleteCount"
               values={{
                 completedLevelOneCollectionCount: jumpBackIn.completedLevelOneCollectionCount,

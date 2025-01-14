@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom';
 import { isEmpty } from 'lodash';
 import { Container, Row, Col, Form, FormGroup } from 'react-bootstrap';
 import Select from 'react-select';
-import { FormattedMessage } from 'react-intl';
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import useCourseCompatibleVersion from './hooks/useCourseCompatibleVersion';
@@ -56,7 +56,7 @@ const CourseVersionLists = () => {
     <Container>
       <Row className='mt-5'>
         <Col md={2}>
-          <FormattedMessage id="courseVersionCompatible.cmsId" /> {cmsId}
+          <h1 id="courseVersionCompatible.cmsId" /> {cmsId}
         </Col>
         <Col md={4}>
           <SearchBoxField
@@ -70,7 +70,7 @@ const CourseVersionLists = () => {
           <Form>
             <FormGroup>
               <Form.Label htmlFor="publish_requested">
-                <FormattedMessage id="courseVersionCompatible.publishRequested" />
+                <h1 id="courseVersionCompatible.publishRequested" />
               </Form.Label>
               <Select
                 name="publish_requested"
@@ -96,14 +96,14 @@ const CourseVersionLists = () => {
                   >
                     <span className={`text-${disablePrevious() ? 'secondary' : 'primary'}`}>
                       <FontAwesomeIcon icon={faArrowLeft} className='mr-2' />
-                      <FormattedMessage id='button.previous' />
+                      <h1 id='button.previous' />
                     </span>
                   </button>
                   <button className='form-control' onClick={() => handlePageClick('next')}
                     disabled={disableNext()}
                   >
                     <span className={`text-${disableNext() ? 'secondary' : 'primary'}`}>
-                      <FormattedMessage id='button.next' />
+                      <h1 id='button.next' />
                       <FontAwesomeIcon icon={faArrowRight} className='ml-2' />
                     </span>
                   </button>
@@ -117,7 +117,7 @@ const CourseVersionLists = () => {
           <>
             <Row style={{ 'marginTop': '20px' }}>
               <Col md={4}>
-                <FormattedMessage id="courseVersionCompatible.title" />
+                <h1 id="courseVersionCompatible.title" />
                 {
                   courseTitleLoading ?
                     <Loader />
@@ -127,7 +127,7 @@ const CourseVersionLists = () => {
               </Col>
             </Row>
 
-            {isEmpty(data) ? <AlertMessage alertType="success" message={<FormattedMessage id="courseVersionCompatible.table.noRecordsAvailable" />} /> : data.map((course) => (
+            {isEmpty(data) ? <AlertMessage alertType="success" message={<h1 id="courseVersionCompatible.table.noRecordsAvailable" />} /> : data.map((course) => (
               < CourseVersionTable
                 key={Math.random()}
                 course={course}

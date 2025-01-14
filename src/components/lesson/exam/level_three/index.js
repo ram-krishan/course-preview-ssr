@@ -9,7 +9,7 @@ import {
   sortBy,
   isEmpty,
 } from 'lodash';
-import { FormattedMessage } from 'react-intl';
+
 import ExamCompleted from '../ExamCompleted';
 import Heading from '../questions/Heading';
 import QuestionBody from '../questions/QuestionBody';
@@ -86,7 +86,7 @@ const LevelThreeQuestions = ({ location }) => {
       <AlertMessage
         alertType="danger"
         customClass="mt-3"
-        message={<FormattedMessage id="course.exam.youHaveAlreadyTakenTheExam" />}
+        message={<h1 id="course.exam.youHaveAlreadyTakenTheExam" />}
       />
     );
   }

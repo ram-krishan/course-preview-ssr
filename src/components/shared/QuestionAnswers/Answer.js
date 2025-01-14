@@ -1,7 +1,7 @@
 import React from 'react';
 import { isEmpty } from 'lodash';
 import PropTypes from 'prop-types';
-import { FormattedMessage } from 'react-intl';
+
 
 import VibCheckboxRadioButton from '../vib_checkbox_and_radio_button';
 import classNames from 'classnames';
@@ -33,8 +33,8 @@ const Answer = ({
 
   const getFeedbackLabel = () => (
     isCorrectAnswerSelectedOrShowFeedbackOnCorrectAnswer()
-      ? <FormattedMessage id="answers.feedback.label.correct" />
-      : <FormattedMessage id="answers.feedback.label.incorrect" />
+      ? <h1 id="answers.feedback.label.correct" />
+      : <h1 id="answers.feedback.label.incorrect" />
   );
 
   const getFeedbackLabelClass = () => (

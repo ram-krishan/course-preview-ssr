@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { Button } from 'react-bootstrap';
-import { FormattedMessage } from 'react-intl';
+
 import { useMutation } from '@apollo/react-hooks';
 import { useHistory, Link } from 'react-router-dom';
 import { truncate } from 'lodash';
@@ -58,16 +58,16 @@ const BeginScreen = ({
         {
           isExamCompleted ? (
             <h4 className="font-weight-bold">
-              <FormattedMessage id="course.topics.exam.beginscreen.already_taken_exam" />
+              <h1 id="course.topics.exam.beginscreen.already_taken_exam" />
             </h4>
           ) : (
             <>
-              <h4 className="font-weight-bold"><FormattedMessage id="course.topics.exam.beginscreen.congratulation" /></h4>
+              <h4 className="font-weight-bold"><h1 id="course.topics.exam.beginscreen.congratulation" /></h4>
               <h4 className="font-weight-bold">
-                <FormattedMessage id="course.topics.exam.beginscreen.completed_lesson_topic" />
+                <h1 id="course.topics.exam.beginscreen.completed_lesson_topic" />
               </h4>
               <p className={classNames(styles['begin-page-para-container'])}>
-                <FormattedMessage id="course.topics.exam.beginscreen.short_topic_quiz" />
+                <h1 id="course.topics.exam.beginscreen.short_topic_quiz" />
               </p>
             </>
           )
@@ -85,7 +85,7 @@ const BeginScreen = ({
                 classes={classNames(styles['next-prev-btn'], styles['prev-btn'])}
               >
                 <RoundedChevronLeft fillColor="#fff" />
-                <FormattedMessage id="button.back" />
+                <h1 id="button.back" />
               </VibButton>
               <span className={styles['practice-text']}>
                 {truncate(lastLevelOneCollection.title, { length: 60, omission: ' ...' })}
@@ -97,7 +97,7 @@ const BeginScreen = ({
               variant="secondary"
               classes={classNames(styles['next-prev-btn'], styles['prev-btn'])}
             >
-              <FormattedMessage id="button.next" />
+              <h1 id="button.next" />
               <RoundedChevronRight fillColor="#fff" />
             </VibButton>
           </div>

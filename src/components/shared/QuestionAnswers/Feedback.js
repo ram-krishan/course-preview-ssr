@@ -1,7 +1,9 @@
+'use client'
+
 import React from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
-import { FormattedMessage } from 'react-intl';
+
 import LaunchIcon from '@material-ui/icons/Launch';
 import styles from './style.module.scss';
 
@@ -14,11 +16,11 @@ const Feedback = ({
 }) => {
   const getFeedbackLabel = () => {
     if (showOnlyIncorrectFeedback && !isCorrectAnswerSelectedOrShowFeedbackOnCorrectAnswer) {
-      return (<FormattedMessage id="answers.feedback.label.incorrect" />);
+      return (<h1 id="answers.feedback.label.incorrect" />);
     }
     return isCorrectAnswerSelectedOrShowFeedbackOnCorrectAnswer
-      ? (<FormattedMessage id="answers.feedback.label.correct" />)
-      : (<FormattedMessage id="answers.feedback.label.incorrect" />);
+      ? (<h1 id="answers.feedback.label.correct" />)
+      : (<h1 id="answers.feedback.label.incorrect" />);
   };
 
   const getFeedbackLabelClass = () => (

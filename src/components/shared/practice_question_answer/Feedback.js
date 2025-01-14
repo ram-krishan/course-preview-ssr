@@ -2,7 +2,7 @@
 import React from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
-import { FormattedMessage } from 'react-intl';
+
 import styles from './style.module.scss';
 
 const Feedback = ({
@@ -12,8 +12,8 @@ const Feedback = ({
   showlockedLessonOrGetLessonLink,
 }) => {
   const getFeedbackLabel = () => (isCorrectAnswerSelectedOrShowFeedbackOnCorrectAnswer
-    ? (<FormattedMessage id="answers.feedback.label.correct" />)
-    : (<FormattedMessage id="answers.feedback.label.incorrect" />));
+    ? (<h1 id="answers.feedback.label.correct" />)
+    : (<h1 id="answers.feedback.label.incorrect" />));
 
   const getFeedbackLabelClass = () => (isCorrectAnswerSelectedOrShowFeedbackOnCorrectAnswer ? 'correct-feedback-label' : 'incorrect-feedback-label');
 

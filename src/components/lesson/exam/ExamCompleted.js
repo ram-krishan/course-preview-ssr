@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { Row, Col } from 'react-bootstrap';
 import classNames from 'classnames';
 import { useHistory } from 'react-router-dom';
-import { FormattedMessage } from 'react-intl';
+
 import TitleBlock from '../../shared/pageTitle';
 import lessonPageStyles from '../lesson-page.module.scss';
 import styles from './questions/question.module.scss';
@@ -19,8 +19,8 @@ const ExamCompleted = ({
   const history = useHistory();
 
   const getTopicHeading = () => (contentType === 'core'
-    ? <FormattedMessage id="heading.learn" />
-    : <FormattedMessage id="heading.reinforce" />);
+    ? <h1 id="heading.learn" />
+    : <h1 id="heading.reinforce" />);
 
   const handleBackBtn = () => {
     history.push(lastLessonPath);
@@ -41,10 +41,10 @@ const ExamCompleted = ({
 
       <h4 className={classNames('mt-5 p-4 text-center', styles['body-container'])}>
         <p className={classNames(styles['already-taken-text'], 'pt-2')}>
-          <FormattedMessage id="course.exam.youHaveAlreadyTakenTheExam" />
+          <h1 id="course.exam.youHaveAlreadyTakenTheExam" />
         </p>
         <p className={classNames(styles['next-below-to-review'], 'pb-2')}>
-          <FormattedMessage id="course.exam.selectNextBelowToReviewYourSelections" />
+          <h1 id="course.exam.selectNextBelowToReviewYourSelections" />
         </p>
       </h4>
       <div className="text-right mt-5 d-flex justify-content-between">
@@ -54,14 +54,14 @@ const ExamCompleted = ({
           handleSubmit={handleBackBtn}
         >
           <RoundedChevronLeft fillColor="#fff" />
-          <FormattedMessage id="course.exam.examCompleted.button.back" />
+          <h1 id="course.exam.examCompleted.button.back" />
         </VibButton>
         <VibButton
           variant="secondary"
           handleSubmit={handleExamCompleted}
           classes={classNames(styles['next-prev-btn'], styles['next-btn'])}
         >
-          <FormattedMessage id="course.exam.examCompleted.button.next" />
+          <h1 id="course.exam.examCompleted.button.next" />
           <RoundedChevronRight fillColor="#fff" />
         </VibButton>
       </div>

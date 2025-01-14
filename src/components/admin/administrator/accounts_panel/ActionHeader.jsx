@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { FormattedMessage } from 'react-intl';
+
 import ReactPaginate from 'react-paginate';
 import { Button, Card, Row } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -30,7 +30,7 @@ const ActionHeader = ({
         >
           <i className="fa fa-remove" />
           {' '}
-          <FormattedMessage id="admin.users.btn.remove_selected" />
+          <h1 id="admin.users.btn.remove_selected" />
         </Button>
 
         <Button
@@ -40,13 +40,13 @@ const ActionHeader = ({
         >
           <i className="fa fa-remove" />
           {' '}
-          <FormattedMessage id="admin.users.btn.remove_all" />
+          <h1 id="admin.users.btn.remove_all" />
         </Button>
 
         <Button className="btn btn-success btn-sm navbar-btn mr-3" onClick={handleAddAccountsClick}>
           <FontAwesomeIcon icon={faPlus} />
           {' '}
-          <FormattedMessage id="admin.users.btn.addAccounts" />
+          <h1 id="admin.users.btn.addAccounts" />
         </Button>
 
         <SearchBoxField
@@ -59,8 +59,8 @@ const ActionHeader = ({
           { totalPages <= 1 ? null
             : (
               <ReactPaginate
-                previousLabel={<FormattedMessage id="pagination.previousLabel" />}
-                nextLabel={<FormattedMessage id="pagination.nextLabel" />}
+                previousLabel={<h1 id="pagination.previousLabel" />}
+                nextLabel={<h1 id="pagination.nextLabel" />}
                 breakLabel="..."
                 breakClassName="break-me"
                 pageCount={totalPages}

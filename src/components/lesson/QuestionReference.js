@@ -1,3 +1,5 @@
+'use client'
+
 import React from 'react';
 import { find, isEmpty, map } from 'lodash';
 import PropTypes from 'prop-types';
@@ -6,7 +8,7 @@ import LessonAnswersBlock from './LessonAnswersBlock';
 import NotSelectAllCorrectAnswersMsg from '../shared/QuestionAnswers/NotSelectAllCorrectAnswersMsg';
 import CardWrapper from '../shared/card_wrapper';
 import useSuperScript from '../shared/hooks/useSuperScript';
-import { FormattedMessage } from 'react-intl';
+
 
 const QuestionReference = ({
   content,
@@ -66,7 +68,7 @@ const QuestionReference = ({
           isOldSubmittedQuestionAnswerChanged
             ? (
               <div className={styles['change-submitted-question-answer']}>
-                <FormattedMessage id="page.question.noteForChangedQuestionSubmittedAnswer" />
+                <h1 id="page.question.noteForChangedQuestionSubmittedAnswer" />
               </div>
             )
             : null

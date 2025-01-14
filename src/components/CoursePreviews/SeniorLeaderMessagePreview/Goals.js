@@ -2,7 +2,7 @@ import React from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import { includes } from 'lodash';
-import { FormattedMessage } from 'react-intl';
+
 import styles from './senior-leader-message-page.module.scss';
 
 import GoalOption from './GoalOption';
@@ -40,11 +40,11 @@ const Goals = ({
   return (
     <div className={classNames(styles['org-right-container'], 'pt-2')}>
       <div className={classNames(styles['goals-heading-text'], `mt-${isSlmContentEmpty ? 0 : 5} mb-4 pt-4 text-center`)}>
-        <FormattedMessage id="goals.whatAreYouTraining" />
+        <h1 id="goals.whatAreYouTraining" />
         {' '}
         <br />
         {' '}
-        <FormattedMessage id={`goals.select.${getLocaleKey(courseGoals.length)}`} />
+        <h1 id={`goals.select.${getLocaleKey(courseGoals.length)}`} />
       </div>
       <div className={classNames(styles['option-container'], styles[`${isSlmContentEmpty ? 'only-goals-container' : ''}`])}>
         <ul className="px-0">
@@ -66,7 +66,7 @@ const Goals = ({
           variant="secondary"
           classes={classNames(styles['continue-btn'], 'btn')}
         >
-          <FormattedMessage id="goals.button.submit" />
+          <h1 id="goals.button.submit" />
         </VibButton>
       </div>
     </div>

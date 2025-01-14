@@ -1,7 +1,7 @@
 
 import React, { useState } from 'react'
 import { Row, Table, Button, Badge } from 'react-bootstrap';
-import { FormattedMessage } from 'react-intl';
+
 import { isEmpty } from 'lodash';
 import { Link } from 'react-router-dom';
 import ViewResultPopup from './ViewResultPopup'
@@ -30,15 +30,15 @@ const VersionCompatibleLogTable = ({
 				courseCmdId={course.record.course_cms_id}
       />
       <Row className="mt-20">
-        <h3><FormattedMessage id="courseVersionCompatible.tableHeading" /></h3>
+        <h3><h1 id="courseVersionCompatible.tableHeading" /></h3>
         <Table striped >
           <thead>
             <tr>
-              <th><FormattedMessage id="courseVersionCompatible.table.courseId" /></th>
-              <th><FormattedMessage id="courseVersionCompatible.table.checkStartedAt" /></th>
-              <th><FormattedMessage id="courseVersionCompatible.table.processingTime" /></th>
-              <th><FormattedMessage id="courseVersionCompatible.table.status" /></th>
-              <th><FormattedMessage id="courseVersionCompatible.table.isCompatible" /></th>
+              <th><h1 id="courseVersionCompatible.table.courseId" /></th>
+              <th><h1 id="courseVersionCompatible.table.checkStartedAt" /></th>
+              <th><h1 id="courseVersionCompatible.table.processingTime" /></th>
+              <th><h1 id="courseVersionCompatible.table.status" /></th>
+              <th><h1 id="courseVersionCompatible.table.isCompatible" /></th>
               <th></th>
             </tr>
           </thead>
@@ -56,11 +56,11 @@ const VersionCompatibleLogTable = ({
                         versionLog.is_valid == null ?
                           null : versionLog.is_valid == true ?
                           <Badge variant="success">
-                            <FormattedMessage id="courseVersionCompatible.table.compatible" />
+                            <h1 id="courseVersionCompatible.table.compatible" />
                           </Badge>
                           :
                           <Badge variant="danger">
-                            <FormattedMessage id="courseVersionCompatible.table.notCompatible" />
+                            <h1 id="courseVersionCompatible.table.notCompatible" />
                           </Badge>
                       }
                     </td>
@@ -68,13 +68,13 @@ const VersionCompatibleLogTable = ({
                     { versionLog.is_valid == null ?
                       null : versionLog.is_valid === true && (
                       <a href={versionLog.s3_file_url} target="_blank" rel="noreferrer">
-                        <FormattedMessage id="courseVersionCompatible.table.exportCsv" />
+                        <h1 id="courseVersionCompatible.table.exportCsv" />
                       </a>
                     )}
                     </td>
                     <td>
                       <Button variant="outline-info" id={versionLog.id} className="float-right" onClick={() => openViewResult(versionLog)}>
-                        <FormattedMessage id="courseVersionCompatible.table.viewResultButton" />
+                        <h1 id="courseVersionCompatible.table.viewResultButton" />
                       </Button>
                     </td>
                   </tr>
@@ -85,7 +85,7 @@ const VersionCompatibleLogTable = ({
             <tbody>
               <tr>
                 <td colspan="15" class="text-center">
-                  <FormattedMessage id="courseVersionCompatible.table.noRecordsAvailable" />
+                  <h1 id="courseVersionCompatible.table.noRecordsAvailable" />
                 </td>
               </tr>
             </tbody>
@@ -96,4 +96,4 @@ const VersionCompatibleLogTable = ({
   )
 }
 
-export default VersionCompatibleLogTable  
+export default VersionCompatibleLogTable

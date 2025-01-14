@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import { FormattedMessage } from 'react-intl';
+
 import { Row, Col } from 'react-bootstrap';
 
 import styles from './practice-page.module.scss';
@@ -26,7 +26,7 @@ const PracticeBoard = ({ vibUserCoursePractice, coursePracticeSessionId }) => {
             <CardWrapper.Body>
               <div className="px-2 pb-2 pt-4">
                 <p data-testid="point-heading" className={styles['wrapper-label']}>
-                  <FormattedMessage id="practicePage.activities.heading.points" />
+                  <h1 id="practicePage.activities.heading.points" />
                 </p>
                 <p data-testid="point-value" className={styles['wrapper-text-no']}>
                   {
@@ -48,7 +48,7 @@ const PracticeBoard = ({ vibUserCoursePractice, coursePracticeSessionId }) => {
             <CardWrapper.Body>
               <div className="px-2 pb-2 pt-4">
                 <p data-testid="streak-heading" className={styles['wrapper-label']}>
-                  <FormattedMessage id="practicePage.activities.heading.streak" />
+                  <h1 id="practicePage.activities.heading.streak" />
                 </p>
                 <p data-testid="streak-count" className={styles['wrapper-text-no']}>
                   {

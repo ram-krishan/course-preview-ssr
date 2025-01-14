@@ -5,7 +5,7 @@ import {
 import classNames from 'classnames';
 import { useQuery } from '@apollo/react-hooks';
 import { useParams, useHistory } from 'react-router-dom';
-import { FormattedMessage } from 'react-intl';
+
 
 import Loader from '../../../components/shared/Loader';
 import AlertMessage from '../../../components/shared/AlertMessage';
@@ -86,7 +86,7 @@ const AssessmentQuestion = () => {
               </div>
 
               <div data-testid="question-count" className={classNames(styles['questions-count-panel'], 'w-100')}>
-                <FormattedMessage
+                <h1
                   id="assessment.numberOfQuestionsComplete"
                   values={{
                     completedQuestions: parseInt(totalCompletedQuestions) + 1,

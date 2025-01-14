@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import { useTable, useExpanded } from 'react-table';
-import { FormattedMessage } from 'react-intl';
+
 import ArrowRightIcon from '@material-ui/icons/ArrowRight';
 import {
   groupBy,
@@ -184,7 +184,7 @@ const TreeListBuilder = ({
       ? (
         <>
           <span className="badge badge-danger mx-2">
-            <FormattedMessage id="coursePreview.label.inValid" />
+            <h1 id="coursePreview.label.inValid" />
           </span>
           { showObjectErrorMessages(object.errorMessages) }
         </>

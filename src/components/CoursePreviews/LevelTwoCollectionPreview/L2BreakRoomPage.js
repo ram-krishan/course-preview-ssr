@@ -7,7 +7,7 @@ import {
 import { useHistory } from 'react-router-dom';
 
 import PropTypes from 'prop-types';
-import { FormattedMessage } from 'react-intl';
+
 import { isEmpty } from 'lodash';
 
 import AlertMessage from '../../shared/AlertMessage';
@@ -120,9 +120,9 @@ const L2BreakRoomPage = ({
       <Card className={classNames(styles['level-two-break-card'])}>
         <Card className={classNames(styles['level-two-break-points'])}>
           <Card.Body className={styles['level-two-collection-details']}>
-            <h3><FormattedMessage id="levelTwoBreakPage.message.greatJob" /></h3>
+            <h3><h1 id="levelTwoBreakPage.message.greatJob" /></h3>
             <p data-testid="previous-l2-coll-title" className="mt-4">
-              <FormattedMessage
+              <h1
                 id="levelTwoBreakPage.message.youCompleted"
                 values={{
                   completedTitle: <span dangerouslySetInnerHTML={{ __html: lastCompletedTitle }} />,
@@ -130,10 +130,10 @@ const L2BreakRoomPage = ({
               />
             </p>
             <p className={classNames(styles['activity-point-text'], 'mt-5')}>
-              <FormattedMessage id="levelTwoBreakPage.heading.youEarned" />
+              <h1 id="levelTwoBreakPage.heading.youEarned" />
               {getActivityPoints()}
               {' '}
-              { <FormattedMessage id="levelTwoBreakPage.heading.activityPoints" />}
+              { <h1 id="levelTwoBreakPage.heading.activityPoints" />}
               {' '}
 
             </p>
@@ -154,7 +154,7 @@ const L2BreakRoomPage = ({
         <Col>
           <div className={classNames(styles['to-do-next-heading'], 'pt-5 pb-4')}>
             <h5>
-              <FormattedMessage id="levelTwoBreakPage.message.nextLikeMessage" />
+              <h1 id="levelTwoBreakPage.message.nextLikeMessage" />
             </h5>
           </div>
         </Col>
@@ -163,12 +163,12 @@ const L2BreakRoomPage = ({
         <Col>
           <Card className={classNames(styles['level-two-break-card'], 'h-100')}>
             <Card.Body className="text-center py-4">
-              <Card.Title className={classNames(styles['to-do-next-sub-heading'])}><FormattedMessage id="levelTwoBreakPage.heading.todayPage" /></Card.Title>
+              <Card.Title className={classNames(styles['to-do-next-sub-heading'])}><h1 id="levelTwoBreakPage.heading.todayPage" /></Card.Title>
               <Card.Text className={classNames(styles['to-do-next-card-text'], 'mb-5')}>
-                <FormattedMessage id="levelTwoBreakPage.message.returnTodayPage" />
+                <h1 id="levelTwoBreakPage.message.returnTodayPage" />
               </Card.Text>
               <Button className={classNames(styles['level-two-break-button'])} onClick={() => {}}>
-                <FormattedMessage id="levelTwoBreakPage.button.takeABreak" />
+                <h1 id="levelTwoBreakPage.button.takeABreak" />
               </Button>
             </Card.Body>
           </Card>
@@ -176,12 +176,12 @@ const L2BreakRoomPage = ({
         <Col>
           <Card className={classNames(styles['level-two-break-card'], 'h-100')}>
             <Card.Body className="text-center py-4">
-              <Card.Title className={classNames(styles['to-do-next-sub-heading'])}><FormattedMessage id="levelTwoBreakPage.heading.nextTopic" /></Card.Title>
+              <Card.Title className={classNames(styles['to-do-next-sub-heading'])}><h1 id="levelTwoBreakPage.heading.nextTopic" /></Card.Title>
               <Card.Text className={classNames(styles['to-do-next-card-text'], 'mb-5')}>
                 <div dangerouslySetInnerHTML={{ __html: nextTopicText }} />
               </Card.Text>
               <Button className={classNames(styles['level-two-break-button'])} onClick={() => { handleNextLvl1Request(); }}>
-                <FormattedMessage id="levelTwoBreakPage.button.continue" />
+                <h1 id="levelTwoBreakPage.button.continue" />
               </Button>
             </Card.Body>
 

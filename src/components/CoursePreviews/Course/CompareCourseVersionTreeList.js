@@ -1,7 +1,7 @@
 import React, { useMemo } from 'react';
 import { isEmpty } from 'lodash';
 import { Link } from 'react-router-dom';
-import { FormattedMessage } from 'react-intl';
+
 import { useQuery } from '@apollo/react-hooks';
 import ArrowRightIcon from '@material-ui/icons/ArrowRight';
 import AlertMessage from '../../shared/AlertMessage';
@@ -40,7 +40,7 @@ const CompareCourseVersionTreeList = ({
       ? (
         <>
           <span className="badge badge-danger mx-2">
-            <FormattedMessage id="coursePreview.label.inValid" />
+            <h1 id="coursePreview.label.inValid" />
           </span>
           { showObjectErrorMessages(object.errorMessages) }
         </>

@@ -3,7 +3,7 @@ import {
   Container, Row, Col,
 } from 'react-bootstrap';
 import styled from 'styled-components';
-import { FormattedMessage } from 'react-intl';
+
 import VibButton from './vib_button';
 
 const StyledContentContainer = styled.div`
@@ -53,14 +53,14 @@ const PageNotFound = () => {
           <Col md={9} className="text-center mx-auto mt-5">
             <StyledContentContainer>
               <StyledHeading className="display-1 d-block mb-3">
-                <FormattedMessage id="message.pageNotFound" />
+                <h1 id="message.pageNotFound" />
               </StyledHeading>
               <StyledCaptionTxt className="mb-4 lead">
-                <FormattedMessage id="message.pageNotFound.caption.text" />
+                <h1 id="message.pageNotFound.caption.text" />
               </StyledCaptionTxt>
               <StyledActionBtnContainer>
                 <VibButton variant="secondary">
-                  <FormattedMessage id="button.goToToday" />
+                  <h1 id="button.goToToday" />
                 </VibButton>
               </StyledActionBtnContainer>
             </StyledContentContainer>

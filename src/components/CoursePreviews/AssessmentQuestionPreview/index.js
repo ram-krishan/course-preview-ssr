@@ -3,7 +3,7 @@ import classNames from 'classnames';
 import { Container, Row, Col } from 'react-bootstrap';
 import { isEmpty, find } from 'lodash';
 import { useParams } from 'react-router-dom';
-import { FormattedMessage } from 'react-intl';
+
 
 import styles from '../../assessment_question/assessment-question.module.scss';
 import QuestionAnswers from '../../shared/QuestionAnswers';
@@ -82,7 +82,7 @@ const AssessmentQuestionPreview = () => {
               </div>
 
               <div className={classNames(styles['questions-count-panel'], 'w-100')}>
-                <FormattedMessage
+                <h1
                   id="assessment.numberOfQuestionsComplete"
                   values={{
                     completedQuestions: 1,
@@ -107,7 +107,7 @@ const AssessmentQuestionPreview = () => {
                   variant="secondary"
                   classes={classNames(styles['goContinue-btn'])}
                 >
-                  <FormattedMessage id="button.continue" />
+                  <h1 id="button.continue" />
                 </VibButton>
               </div>
             </div>

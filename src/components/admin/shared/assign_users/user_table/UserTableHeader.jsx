@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Form } from 'react-bootstrap';
-import { FormattedMessage } from 'react-intl';
+
 
 const UserTableHeader = ({
   onSelectAllUsersChange,
@@ -18,8 +18,8 @@ const UserTableHeader = ({
           />
         </Form.Label>
       </th>
-      <th><FormattedMessage id="admin.shared.assignUsersPopup.tableHeaders.name" /></th>
-      <th><FormattedMessage id="admin.shared.assignUsersPopup.tableHeaders.isManager" /></th>
+      <th><h1 id="admin.shared.assignUsersPopup.tableHeaders.name" /></th>
+      <th><h1 id="admin.shared.assignUsersPopup.tableHeaders.isManager" /></th>
     </tr>
   </thead>
 );

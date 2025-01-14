@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { Button } from 'react-bootstrap';
 import classnames from 'classnames';
 import { useMutation } from '@apollo/react-hooks';
-import { FormattedMessage } from 'react-intl';
+
 import { useHistory } from 'react-router-dom';
 
 import { vibGraphqlStates, flashMessageState } from '../../../graphql_states';
@@ -93,7 +93,7 @@ const ActionsButtons = ({
         >
           {
           assessmentExamQuestionsState.previousQuestion
-            ? <FormattedMessage id="button.back_to_previous" />
+            ? <h1 id="button.back_to_previous" />
             : null
         }
         </Button>
@@ -106,7 +106,7 @@ const ActionsButtons = ({
           variant="secondary"
           classes={classnames(styles['goContinue-btn'])}
         >
-          <FormattedMessage id="button.continue" />
+          <h1 id="button.continue" />
         </VibButton>
       </div>
     </div>

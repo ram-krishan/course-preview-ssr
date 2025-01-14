@@ -2,7 +2,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import { FormattedMessage } from 'react-intl';
+
 
 
 import OutcomeBlock from './OutcomeBlock';
@@ -52,7 +52,7 @@ const SideContent = ({
           handleSubmit={() => handleLessonComplete(status)}
           isLoading={continueBntLoading}
         >
-          <FormattedMessage id="button.continue" />
+          <h1 id="button.continue" />
         </VibButton>
       </div>
     </>

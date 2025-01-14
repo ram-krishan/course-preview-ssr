@@ -25,7 +25,7 @@ const ContentStackExportContainer = () => {
           className="text-right ml-3 px-3 py-2 workflowStage-btn export-button-style button-custom-mb"
           onClick={() => setShowContentStackExportModal(true)}
         >
-          <FormattedMessage id="coursePreview.btn.ContentstackExport" />
+          <h1 id="coursePreview.btn.ContentstackExport" />
         </Button>
       ) : null}
       <ContentStackExportModal

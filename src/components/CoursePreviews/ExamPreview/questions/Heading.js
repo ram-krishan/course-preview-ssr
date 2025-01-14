@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { Link } from 'react-router-dom';
 import { Button, Row, Col } from 'react-bootstrap';
-import { FormattedMessage } from 'react-intl';
+
 
 import styles from './question.module.scss';
 import TitleBlock from '../../../shared/pageTitle';
@@ -15,8 +15,8 @@ const Heading = ({
   contentType,
 }) => {
   const getTopicHeading = () => (contentType === 'core'
-    ? <FormattedMessage id="heading.learn" />
-    : <FormattedMessage id="heading.reinforce" />);
+    ? <h1 id="heading.learn" />
+    : <h1 id="heading.reinforce" />);
 
   return (
     <Row className="my-3 align-items-center">
@@ -33,7 +33,7 @@ const Heading = ({
         <div className="d-flex justify-content-end">
           <Link to={lastLessonPath}>
             <Button variant="default" className={classNames(styles['back-btn'], 'small_fontsize')}>
-              <FormattedMessage id="course.exam.button.backToLesson" />
+              <h1 id="course.exam.button.backToLesson" />
             </Button>
           </Link>
         </div>

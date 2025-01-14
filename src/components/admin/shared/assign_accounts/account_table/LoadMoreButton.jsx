@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import { Button } from 'react-bootstrap';
-import { FormattedMessage } from 'react-intl';
+
 
 const renderButton = (currentPage, totalPages, handleLoadMoreClick) => {
   if (currentPage === 0 || (currentPage === 1 && totalPages === 1)) {
@@ -10,7 +10,7 @@ const renderButton = (currentPage, totalPages, handleLoadMoreClick) => {
   if (currentPage === totalPages) {
     return (
       <center>
-        <FormattedMessage id="admin.shared.assignAccountsPopup.footer.noMoreAccounts" />
+        <h1 id="admin.shared.assignAccountsPopup.footer.noMoreAccounts" />
       </center>
     );
   }
@@ -18,7 +18,7 @@ const renderButton = (currentPage, totalPages, handleLoadMoreClick) => {
   return (
     <center>
       <Button className="center btn btn-info" onClick={() => handleLoadMoreClick(true)}>
-        <FormattedMessage id="admin.shared.assignAccountsPopup.footer.loadMoreAccounts" />
+        <h1 id="admin.shared.assignAccountsPopup.footer.loadMoreAccounts" />
       </Button>
     </center>
   );

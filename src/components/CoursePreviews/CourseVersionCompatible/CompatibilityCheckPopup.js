@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { isEmpty } from 'lodash';
 import { Modal, Row, Col, Form, Button } from 'react-bootstrap';
-import { FormattedMessage } from 'react-intl';
+
 import AlertMessage from '../../shared/AlertMessage';
 import Loader from '../../shared/Loader';
 import useCreateCourseCompatiblity from './hooks/useCreateCourseCompatiblity';
@@ -26,7 +26,7 @@ const CompatibilityCheckPopup = ({
     courseCmsId: courseRecord.course_cms_id
   })
   const [displayResponseCourseCompatible, setDisplayResponseCourseCompatible] = useState(false)
-  const { 
+  const {
     createCompatibileRecord,
     loading,
     checkCourseVersionCompatibleData,
@@ -60,7 +60,7 @@ const CompatibilityCheckPopup = ({
     <Modal show={compatibilityCheckPopup} onHide={closeModalCompatibleIdToBlank} size="lg">
       <Modal.Header closeButton>
         <Row>
-          <Col><FormattedMessage id="compatibilityCheckPopup.heading.sourceCourseId" />: {courseId}</Col>
+          <Col><h1 id="compatibilityCheckPopup.heading.sourceCourseId" />: {courseId}</Col>
         </Row>
       </Modal.Header>
       <Modal.Body>
@@ -82,7 +82,7 @@ const CompatibilityCheckPopup = ({
                 <Form>
                   {
                     isEmpty(courseVersionCompatibleData && courseVersionCompatibleData.records) ?
-                      <FormattedMessage id="courseVersionCompatible.table.noRecordsAvailable" /> :
+                      <h1 id="courseVersionCompatible.table.noRecordsAvailable" /> :
                       courseVersionCompatibleData && courseVersionCompatibleData.records.map((course) => (
                         <Row key={course.id}>
                           <Form.Check style={{ marginLeft: '20px' }}>
@@ -112,24 +112,24 @@ const CompatibilityCheckPopup = ({
 
       <Modal.Footer>
         {displayResponseCourseCompatible ?
-          <Button 
+          <Button
             className="primary"
             onClick={closeModalCompatibleIdToBlank}
             disabled={loading ? true : false}
           >
             {
               loading ?
-                <FormattedMessage id="compatibilityCheckPopup.footer.submittingButton" />
+                <h1 id="compatibilityCheckPopup.footer.submittingButton" />
                  :
-                <FormattedMessage id="compatibilityCheckPopup.footer.closeButton" />
-            } 
+                <h1 id="compatibilityCheckPopup.footer.closeButton" />
+            }
           </Button> :
-          <Button 
+          <Button
             className="primary"
             onClick={handlerSubmitForCompatibleRecord}
             disabled={courseIdAndCompatibleId.compatibleCourseId && !loading ? false : true}
           >
-            <FormattedMessage id="compatibilityCheckPopup.footer.submitButton" /> 
+            <h1 id="compatibilityCheckPopup.footer.submitButton" />
           </Button>
         }
       </Modal.Footer>

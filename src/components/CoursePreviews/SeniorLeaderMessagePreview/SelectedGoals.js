@@ -2,7 +2,7 @@ import React from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import CheckCircleOutlineIcon from '@material-ui/icons/CheckCircleOutline';
-import { FormattedMessage } from 'react-intl';
+
 
 import AlertMessage from '../../../components/shared/AlertMessage';
 import styles from './senior-leader-message-page.module.scss';
@@ -28,8 +28,8 @@ const SelectedGoals = ({ goals, showGoalSelectedSuccessMessage, isSlmContentEmpt
     <>
       <span className={classNames(styles['success-message-icon'])}><CheckCircleOutlineIcon /></span>
       <span className={classNames(styles['success-message'])}>
-        <strong><FormattedMessage id="goals.heading.success" /></strong>
-        <FormattedMessage
+        <strong><h1 id="goals.heading.success" /></strong>
+        <h1
           id={`goals.success.message.${getLocaleKey(goals.length)}`}
           values={{
             goalsLength: goals.length,
@@ -42,7 +42,7 @@ const SelectedGoals = ({ goals, showGoalSelectedSuccessMessage, isSlmContentEmpt
   return (
     <div className={classNames(styles['org-right-container'], 'pt-3')}>
       <div className={classNames(styles['goals-heading-text'], `mt-${isSlmContentEmpty ? 0 : 5} mb-4 pt-4 text-center`)}>
-        <FormattedMessage id="goals.selectedGoalsMessage" />
+        <h1 id="goals.selectedGoalsMessage" />
       </div>
       {
         showGoalSelectedSuccessMessage
@@ -75,7 +75,7 @@ const SelectedGoals = ({ goals, showGoalSelectedSuccessMessage, isSlmContentEmpt
             variant="secondary"
             classes={classNames(styles['continue-btn'])}
           >
-            <FormattedMessage id="goals.button.nextActivity" />
+            <h1 id="goals.button.nextActivity" />
           </VibButton>
         </div>
       </div>

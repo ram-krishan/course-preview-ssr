@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
-import { FormattedMessage } from 'react-intl';
+
 import style from './assessment-question.module.scss';
 import ExamTimeLineItemBlock from './ExamTimeLineItemBlock';
 
@@ -27,7 +27,7 @@ const ExamTimeLineItem = ({ item, currentItem }) => {
         item.id === currentItem.id
           ? (
             <p className={classnames(style['current-item-pointer'], 'mb-0 text-decoration-none', item.id === currentItem.id ? '' : 'd-none')}>
-              <FormattedMessage id="assessment.label.youAreHere" />
+              <h1 id="assessment.label.youAreHere" />
             </p>
           )
           : null

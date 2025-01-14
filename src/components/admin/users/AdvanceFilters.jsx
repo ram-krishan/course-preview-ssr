@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { FormattedMessage } from 'react-intl';
+
 import { Button } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch, faTimes } from '@fortawesome/free-solid-svg-icons';
@@ -57,7 +57,7 @@ const AdvanceFilters = ({
       <div className="col-md-6 mb-4">
         <MultiSelectField
           placeholder={
-            <FormattedMessage id="user.filter.label.salesRoles" />
+            <h1 id="user.filter.label.salesRoles" />
           }
           selectBoxOptions={salesRoleSelectOptions}
           selectedValues={selectedSalesRoles}
@@ -68,7 +68,7 @@ const AdvanceFilters = ({
       <div className="col-md-6 mb-4">
         <MultiSelectField
           fieldName="permissions[]"
-          placeholder={<FormattedMessage id="user.filter.label.permissions" />}
+          placeholder={<h1 id="user.filter.label.permissions" />}
           selectBoxOptions={permissionSelectOptions}
           selectedValues={selectedPermissions}
           handleChange={handlePermissionChange}
@@ -80,7 +80,7 @@ const AdvanceFilters = ({
           options={statusOptions}
           selectedValue={selectedStatus}
           handleChange={handleStatusChange}
-          placeholder={<FormattedMessage id="user.profile.form.label.status" />}
+          placeholder={<h1 id="user.profile.form.label.status" />}
           className="react-select-container modal-search-sm-margin"
         />
       </div>
@@ -90,14 +90,14 @@ const AdvanceFilters = ({
           options={confirmOptions}
           selectedValue={selectedConfirmation}
           handleChange={handleConfirmChange}
-          placeholder={<FormattedMessage id="user.profile.form.label.confirmed" />}
+          placeholder={<h1 id="user.profile.form.label.confirmed" />}
           className="react-select-container modal-search-sm-margin"
         />
       </div>
       <div className="col-md-6 mb-4">
         <MultiSelectField
           placeholder={
-            <FormattedMessage id="user.profile.form.label.manager" />
+            <h1 id="user.profile.form.label.manager" />
         }
           selectBoxOptions={managerSelectOptions}
           selectedValues={selectedManagers}
@@ -108,7 +108,7 @@ const AdvanceFilters = ({
       <div className="col-md-6 mb-4">
         <MultiSelectField
           placeholder={
-            <FormattedMessage id="user.profile.form.label.userGroup" />
+            <h1 id="user.profile.form.label.userGroup" />
         }
           selectBoxOptions={userGroupsSelectOptions}
           selectedValues={selectedUserGroups}
@@ -120,7 +120,7 @@ const AdvanceFilters = ({
       <div className="col-md-6 mb-4">
         <MultiSelectField
           placeholder={
-            <FormattedMessage id="user.profile.form.label.languagePreference" />
+            <h1 id="user.profile.form.label.languagePreference" />
         }
           selectBoxOptions={languageOptions}
           selectedValues={selectedLanguages}
@@ -131,7 +131,7 @@ const AdvanceFilters = ({
       <div className="col-md-6 tree-select-style mb-4">
         <TreeSelectField
           placeholder={
-            <FormattedMessage id="user.profile.form.label.organizationalGroup" />
+            <h1 id="user.profile.form.label.organizationalGroup" />
           }
           treeData={organizationalGroupsSelectOptions}
           selectedValues={selectedOrganizationalGroups}
@@ -142,7 +142,7 @@ const AdvanceFilters = ({
       <div className="col-md-6 tree-select-style mb-4">
         <TreeSelectField
           placeholder={
-            <FormattedMessage id="user.profile.form.label.territory" />
+            <h1 id="user.profile.form.label.territory" />
         }
           treeData={territorySelectOptions}
           selectedValues={selectedTerritories}

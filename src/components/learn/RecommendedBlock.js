@@ -1,7 +1,7 @@
 // "FILE NOT IN USED"
 import React from 'react';
 import { Row } from 'react-bootstrap';
-import { FormattedMessage } from 'react-intl';
+
 
 import CourseCard from './CourseCard';
 import {
@@ -41,7 +41,7 @@ const recommendedCourses = [
 
 const RecommendedBlock = () => (
   <div className="mt-5 pb-4">
-    <h5 className={styles['recommended-heading']}><strong><FormattedMessage id="heading.recommended" /></strong></h5>
+    <h5 className={styles['recommended-heading']}><strong><h1 id="heading.recommended" /></strong></h5>
     <Row className="mt-3">
       {recommendedCourses.map((recommendedCourse, index) => (
         <CourseCard

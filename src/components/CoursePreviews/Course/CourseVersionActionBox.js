@@ -1,6 +1,6 @@
 import React from 'react';
 import { isEmpty, some } from 'lodash';
-import { FormattedMessage } from 'react-intl';
+
 import { useApolloClient } from '@apollo/react-hooks';
 
 import validateLevelCourse from './validator';
@@ -34,11 +34,11 @@ const CourseVersionActionBox = ({
     return (
       courseHash.isValid ? (
         <span className="badge badge-success mx-2">
-          <FormattedMessage id="coursePreview.label.valid" />
+          <h1 id="coursePreview.label.valid" />
         </span>
       ) : (
         <span className="badge badge-danger mx-2">
-          <FormattedMessage id="coursePreview.label.inValid" />
+          <h1 id="coursePreview.label.inValid" />
         </span>
       )
     );
@@ -68,7 +68,7 @@ const CourseVersionActionBox = ({
         isDisabled={isComparingCourseVersion}
         classes="ml-3 px-3 py-2"
       >
-        <FormattedMessage id="coursePreview.btn.validateData" />
+        <h1 id="coursePreview.btn.validateData" />
       </VibButton>
       <VibButton
         key={`expand-btn-${Math.random()}`}
@@ -76,7 +76,7 @@ const CourseVersionActionBox = ({
         classes="text-right ml-3 px-3 py-2"
         isDisabled={isComparingCourseVersion || !(some(treeData, ['expanded', false]) || some(treeData, ['expanded', undefined]))}
       >
-        <FormattedMessage id="coursePreview.btn.expandAll" />
+        <h1 id="coursePreview.btn.expandAll" />
       </VibButton>
       <VibButton
         key={`collapse-btn-${Math.random()}`}
@@ -84,7 +84,7 @@ const CourseVersionActionBox = ({
         classes="text-right ml-3 px-3 py-2"
         isDisabled={isComparingCourseVersion || !some(treeData, ['expanded', true])}
       >
-        <FormattedMessage id="coursePreview.btn.collapseAll" />
+        <h1 id="coursePreview.btn.collapseAll" />
       </VibButton>
       {
         canShowCompareBtn ? (
@@ -94,7 +94,7 @@ const CourseVersionActionBox = ({
             classes="text-right ml-3 px-3 py-2 float-right"
             isDisabled={isComparingCourseVersion}
           >
-            <FormattedMessage id="coursePreview.btn.compare" />
+            <h1 id="coursePreview.btn.compare" />
           </VibButton>
         ) : null
       }

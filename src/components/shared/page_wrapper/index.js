@@ -1,3 +1,5 @@
+"use client"
+
 import React from 'react';
 import styled, { css } from 'styled-components';
 import PropTypes from 'prop-types';

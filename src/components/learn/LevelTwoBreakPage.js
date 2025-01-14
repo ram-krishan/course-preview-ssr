@@ -7,7 +7,7 @@ import PropTypes from 'prop-types';
 import { useHistory } from 'react-router-dom';
 import { useMutation } from '@apollo/react-hooks';
 import classNames from 'classnames';
-import { FormattedMessage } from 'react-intl';
+
 import styles from './learn-page.module.scss';
 import VibRouteGenerator from '../shared/vib_route_generator';
 import { vibGraphqlStates, flashMessageState } from '../../../graphql_states';
@@ -88,9 +88,9 @@ const LevelTwoBreakPage = ({
         <Card className={classNames(styles['level-two-break-card'])}>
           <Card className={classNames(styles['level-two-break-points'])}>
             <Card.Body className={styles['level-two-collection-details']}>
-              <h3><FormattedMessage id="levelTwoBreakPage.message.greatJob" /></h3>
+              <h3><h1 id="levelTwoBreakPage.message.greatJob" /></h3>
               <p data-testid="previous-l2-coll-title" className="mt-4">
-                <FormattedMessage
+                <h1
                   id={getTranslationIdOfLastComplete()}
                   values={{
                     completedTitle: getPreviousCompletedTitle(),
@@ -98,10 +98,10 @@ const LevelTwoBreakPage = ({
                 />
               </p>
               <p className={classNames(styles['activity-point-text'], 'mt-5')}>
-                <FormattedMessage id="levelTwoBreakPage.heading.youEarned" />
+                <h1 id="levelTwoBreakPage.heading.youEarned" />
                 {canShowAssessmentTitle ? assessment.activityPoints : previousLevelTwoCollection.activityPoints}
                 {' '}
-                { <FormattedMessage id="levelTwoBreakPage.heading.activityPoints" />}
+                { <h1 id="levelTwoBreakPage.heading.activityPoints" />}
                 {' '}
 
               </p>
@@ -127,7 +127,7 @@ const LevelTwoBreakPage = ({
           <Col>
             <div className={classNames(styles['to-do-next-heading'], 'pt-5 pb-4')}>
               <h5>
-                <FormattedMessage id="levelTwoBreakPage.message.nextLikeMessage" />
+                <h1 id="levelTwoBreakPage.message.nextLikeMessage" />
               </h5>
             </div>
           </Col>
@@ -136,12 +136,12 @@ const LevelTwoBreakPage = ({
           <Col>
             <Card className={classNames(styles['level-two-break-card'], 'h-100')}>
               <Card.Body className="text-center py-4">
-                <Card.Title className={classNames(styles['to-do-next-sub-heading'])}><FormattedMessage id="levelTwoBreakPage.heading.todayPage" /></Card.Title>
+                <Card.Title className={classNames(styles['to-do-next-sub-heading'])}><h1 id="levelTwoBreakPage.heading.todayPage" /></Card.Title>
                 <Card.Text className={classNames(styles['to-do-next-card-text'], 'mb-5')}>
-                  <FormattedMessage id="levelTwoBreakPage.message.returnTodayPage" />
+                  <h1 id="levelTwoBreakPage.message.returnTodayPage" />
                 </Card.Text>
                 <Button className={classNames(styles['level-two-break-button'])} onClick={() => { handleTakeABreak(); }}>
-                  <FormattedMessage id="levelTwoBreakPage.button.takeABreak" />
+                  <h1 id="levelTwoBreakPage.button.takeABreak" />
                 </Button>
               </Card.Body>
             </Card>
@@ -149,12 +149,12 @@ const LevelTwoBreakPage = ({
           <Col>
             <Card className={classNames(styles['level-two-break-card'], 'h-100')}>
               <Card.Body className="text-center py-4">
-                <Card.Title className={classNames(styles['to-do-next-sub-heading'])}><FormattedMessage id="levelTwoBreakPage.heading.nextTopic" /></Card.Title>
+                <Card.Title className={classNames(styles['to-do-next-sub-heading'])}><h1 id="levelTwoBreakPage.heading.nextTopic" /></Card.Title>
                 <Card.Text className={classNames(styles['to-do-next-card-text'], 'mb-5')}>
                   <span dangerouslySetInnerHTML={{ __html: jumpBackIn.levelTwoCollectionIntroText === null ? firstLevelOneCollection.title : jumpBackIn.levelTwoCollectionIntroText }} />
                 </Card.Text>
                 <Button className={classNames(styles['level-two-break-button'])} onClick={() => { handleStartNextTopic(); }}>
-                  <FormattedMessage id="levelTwoBreakPage.button.continue" />
+                  <h1 id="levelTwoBreakPage.button.continue" />
                 </Button>
               </Card.Body>
 

@@ -77,7 +77,7 @@ const getObjectDataSet = (type) => {
 
 class UsersPanel extends React.Component {
   constructor(props) {
-    
+
     super(props);
     this.onSort = this.onSort.bind(this);
     this.getUsersList = this.getUsersList.bind(this);
@@ -284,7 +284,7 @@ class UsersPanel extends React.Component {
 
           {isEmpty(usersList) ? (
             <div className="mt-4 text-center">
-              <FormattedMessage id="admin.userCollections.userTable.noData" />
+              <h1 id="admin.userCollections.userTable.noData" />
             </div>
           ) : (
             <div>

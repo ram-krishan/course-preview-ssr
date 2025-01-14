@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import { FormattedMessage } from 'react-intl';
+
 import PerfectScrollbar from 'react-perfect-scrollbar';
 import { useHistory, useLocation } from 'react-router-dom';
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
@@ -63,7 +63,7 @@ const LessonPageContent = ({
   const nextItemTitle = () => {
     if (nextTopicLesson) {
       return (
-        <FormattedMessage
+        <h1
           id="heading.nextLessonTitle"
           values={{ nextLessonTitle: nextTopicLesson.levelOneCollection.title }}
         />
@@ -73,7 +73,7 @@ const LessonPageContent = ({
   };
 
   const getCurrentTopicCountElement = () => (
-    <FormattedMessage
+    <h1
       id="label.lessonPage.levelTwoCollectionCompleteCount"
       values={{
         currentLevelTwoCollectionCount,

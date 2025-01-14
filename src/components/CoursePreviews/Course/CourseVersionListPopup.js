@@ -1,7 +1,7 @@
 import React from 'react';
 import { useQuery } from '@apollo/react-hooks';
 import { isEmpty } from 'lodash';
-import { FormattedMessage } from 'react-intl';
+
 import { Modal } from 'react-bootstrap';
 import Loader from '../../shared/Loader';
 import AlertMessage from '../../shared/AlertMessage';
@@ -75,12 +75,12 @@ const CourseVersionListPopup = ({
     isValid
       ? (
         <span className="badge badge-success mx-2">
-          <FormattedMessage id="coursePreview.label.valid" />
+          <h1 id="coursePreview.label.valid" />
         </span>
       )
       : (
         <span className="badge badge-danger mx-2">
-          <FormattedMessage id="coursePreview.label.inValid" />
+          <h1 id="coursePreview.label.inValid" />
         </span>
       )
   );
@@ -100,7 +100,7 @@ const CourseVersionListPopup = ({
       ),
     },
     {
-      Header: <span><FormattedMessage id="coursePreview.compare.table.heading.courseVersionId" /></span>,
+      Header: <span><h1 id="coursePreview.compare.table.heading.courseVersionId" /></span>,
       accessor: 'id',
       disableSortBy: true,
       Cell: (props) => (
@@ -110,7 +110,7 @@ const CourseVersionListPopup = ({
       ),
     },
     {
-      Header: <span><FormattedMessage id="coursePreview.compare.table.heading.label" /></span>,
+      Header: <span><h1 id="coursePreview.compare.table.heading.label" /></span>,
       accessor: 'courseVersionLabels',
       disableSortBy: true,
       Cell: (props) => (
@@ -120,7 +120,7 @@ const CourseVersionListPopup = ({
       ),
     },
     {
-      Header: <span><FormattedMessage id="coursePreview.compare.table.heading.cmsVersion" /></span>,
+      Header: <span><h1 id="coursePreview.compare.table.heading.cmsVersion" /></span>,
       accessor: 'cmsVersion',
       disableSortBy: false,
       Cell: (props) => (
@@ -130,7 +130,7 @@ const CourseVersionListPopup = ({
       ),
     },
     {
-      Header: <span><FormattedMessage id="coursePreview.compare.table.heading.createdAt" /></span>,
+      Header: <span><h1 id="coursePreview.compare.table.heading.createdAt" /></span>,
       accessor: 'formattedCreatedAt',
       disableSortBy: false,
       sortType: (a, b) => new Date(a.original.formattedCreatedAt) - new Date(b.original.formattedCreatedAt),
@@ -141,7 +141,7 @@ const CourseVersionListPopup = ({
       ),
     },
     {
-      Header: <span><FormattedMessage id="coursePreview.compare.table.heading.valid" /></span>,
+      Header: <span><h1 id="coursePreview.compare.table.heading.valid" /></span>,
       accessor: 'isValid',
       disableSortBy: false,
       Cell: (props) => (
@@ -154,7 +154,7 @@ const CourseVersionListPopup = ({
   return (
     <Modal show={compareCourseVesrionPopupVisibility} onHide={toggleModal} size="xl">
       <Modal.Header closeButton>
-        <FormattedMessage id="coursePreview.heading.courseVesrsions" />
+        <h1 id="coursePreview.heading.courseVesrsions" />
       </Modal.Header>
 
       <Modal.Body>
@@ -167,7 +167,7 @@ const CourseVersionListPopup = ({
               extraClassName="course-version-list-popup-table"
             />
           )
-          : <h4><FormattedMessage id="coursePreview.compare.heading.noCourseVersions" /></h4>
+          : <h4><h1 id="coursePreview.compare.heading.noCourseVersions" /></h4>
       }
       </Modal.Body>
 
@@ -178,7 +178,7 @@ const CourseVersionListPopup = ({
               handleSubmit={handleCompareCourseVersion}
               isDisabled={selectedCourseVersions.length !== 2}
             >
-              <FormattedMessage id="coursePreview.btn.compare" />
+              <h1 id="coursePreview.btn.compare" />
             </VibButton>
           )
           : null }

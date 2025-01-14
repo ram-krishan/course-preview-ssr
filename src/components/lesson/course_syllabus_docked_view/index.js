@@ -4,7 +4,7 @@ import { useQuery } from '@apollo/react-hooks';
 import classNames from 'classnames';
 import { useParams } from 'react-router-dom';
 import { isEmpty, find, last } from 'lodash';
-import { FormattedMessage } from 'react-intl';
+
 import PropTypes from 'prop-types';
 import styles from './course-syllabus-docked-view-style.module.scss';
 import SyllabusCollapsePanel from './SyllabusCollapsePanel';
@@ -67,7 +67,7 @@ const CourseSyllabusDockedView = ({
         <Row className="mx-0 min-height-75vh">
           <Col sm={10} className={classNames(styles['bg-white'], 'p-0 pr-4 content-container')}>
             <h3 className="text-center mt-2">
-              <FormattedMessage id="message.noTopicAvailableForCourse" />
+              <h1 id="message.noTopicAvailableForCourse" />
             </h3>
           </Col>
         </Row>
@@ -297,7 +297,7 @@ const CourseSyllabusDockedView = ({
               courseCollection={coreCollection}
               currentLevelCollections={currentLevelCollections}
               courseId={courseId}
-              courseType={<FormattedMessage id="heading.course_index.learn" />}
+              courseType={<h1 id="heading.course_index.learn" />}
               activeKeys={activeKeys}
               setActiveKeys={setActiveKeys}
               jumpBackIn={jumpBackIn}
@@ -311,7 +311,7 @@ const CourseSyllabusDockedView = ({
               courseCollection={enrichmentCollection}
               currentLevelCollections={currentLevelCollections}
               courseId={courseId}
-              courseType={<FormattedMessage id="heading.course_index.reinforce" />}
+              courseType={<h1 id="heading.course_index.reinforce" />}
               activeKeys={activeKeys}
               setActiveKeys={setActiveKeys}
               jumpBackIn={jumpBackIn}

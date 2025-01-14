@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import { FormattedMessage } from 'react-intl';
+
 import styles from './question.module.scss';
 import VibButton from '../../../shared/vib_button';
 
@@ -21,7 +21,7 @@ const PreviousNextBlock = ({
         displayBackToPreviousQuestionLink ? (
           <div onClick={handleClickOnPreviousQuestion}>
             <strong>
-              <FormattedMessage id="course.exam.heading.backToPreviousQuestion" />
+              <h1 id="course.exam.heading.backToPreviousQuestion" />
             </strong>
           </div>
         ) : null
@@ -35,7 +35,7 @@ const PreviousNextBlock = ({
           handleSubmit={handleClickOnNextQuestion}
           isDisabled={nextDisable}
         >
-          <FormattedMessage id="button.next" />
+          <h1 id="button.next" />
         </VibButton>
       </div>
     </div>

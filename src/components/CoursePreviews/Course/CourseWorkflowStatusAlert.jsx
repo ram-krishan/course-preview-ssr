@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { FormattedMessage } from 'react-intl';
+
 import Alert from 'react-bootstrap/Alert';
 import WarningAlertIcon from '../../assets/images/warning_alert_icon.png'
 import ErrorAlertIcon from '../../assets/images/error-alert.png'
@@ -19,22 +19,22 @@ const CourseWorkflowStatusAlert = ({
 
   const [showConfirmCancelModal, setShowConfirmCancelModal] = useState(false);
 
-  const [isSuccess, 
-    errorMessage, 
-    loading, 
-    setIsSuccess, 
-    setErrorMessage, 
+  const [isSuccess,
+    errorMessage,
+    loading,
+    setIsSuccess,
+    setErrorMessage,
     cancelCourseWorkFlow] = useWorkFlowCancel();
 
   const isErrorOccurred = (course) => course.status === 'error_occurred';
-  
+
   const handleCancelCourseWorkFlow = ()=>{
     cancelCourseWorkFlow({
       id: course.id
     })
     setShowConfirmCancelModal(false)
   }
-  
+
   const handleAfterSuccessAlertHide = ()=>{
     setIsSuccess(false)
     dismissCourseAlert(course)
@@ -51,12 +51,12 @@ const CourseWorkflowStatusAlert = ({
           src={ErrorAlertIcon}
         />
         <span className="alert-banner-style">
-          <FormattedMessage
+          <h1
             id="coursePreview.workflowStage.api.processing.error"
             values={{ courseName: course.name }}
           />
           <Link className='ml-2' onClick={() => handleViewDetails(course)}>
-            <FormattedMessage id="coursePreview.validateData.api.viewDetails" />
+            <h1 id="coursePreview.validateData.api.viewDetails" />
           </Link>
         </span>
       </Alert >
@@ -78,7 +78,7 @@ const CourseWorkflowStatusAlert = ({
             src={SuccessAlertIcon}
           />
           <span className="alert-banner-style">
-            <FormattedMessage
+            <h1
               id="coursePreview.workflowStage.api.cancel.success.message"
             />
           </span>
@@ -90,7 +90,7 @@ const CourseWorkflowStatusAlert = ({
   return (
     <>
       {
-        errorMessage && 
+        errorMessage &&
         < Alert className = "error-alert-banner-style" variant = "danger" onClose = {() => setErrorMessage(null)} dismissible >
           <img
             alt="ErrorAlertIcon"
@@ -102,7 +102,7 @@ const CourseWorkflowStatusAlert = ({
           </span>
         </Alert >
       }
-      
+
       <Alert data-cms-course={JSON.stringify(course)} variant="warning" className="warning-alert-banner" onClose={() => dismissCourseAlert(course)} dismissible>
         <img
           alt="warningAlertIcon"
@@ -110,7 +110,7 @@ const CourseWorkflowStatusAlert = ({
           src={WarningAlertIcon}
         />
         <span className="alert-banner-style">
-          <FormattedMessage
+          <h1
             id="coursePreview.workflowStage.api.processed"
             values={{
               courseName: course.name
@@ -122,7 +122,7 @@ const CourseWorkflowStatusAlert = ({
             </div>
             <div>
               <Link className='ml-2' onClick={()=>(setShowConfirmCancelModal(true))}>
-                <FormattedMessage id="coursePreview.setWorkflowStage.btn.cancel" />
+                <h1 id="coursePreview.setWorkflowStage.btn.cancel" />
               </Link>
             </div>
           </div>

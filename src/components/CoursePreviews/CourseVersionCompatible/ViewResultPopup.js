@@ -1,6 +1,6 @@
 import React from 'react';
 import { Modal, Row, Col } from 'react-bootstrap';
-import { FormattedMessage } from 'react-intl';
+
 import Loader from '../../shared/Loader';
 import useVersionCompatibleDetails from './hooks/useVersionCompatibleDetails';
 
@@ -18,11 +18,11 @@ const ViewResultPopup = ({
     <Modal show={viewResult} onHide={closeModal} size="lg">
       <Modal.Header closeButton>
         <Row>
-          <Col><FormattedMessage id="viewResultPopup.heading" /></Col>
+          <Col><h1 id="viewResultPopup.heading" /></Col>
         </Row>
       </Modal.Header>
       <Modal.Body>
-        { loading ? <Loader /> : 
+        { loading ? <Loader /> :
         <pre>{JSON.stringify(data && data.record, null, 2)}</pre>}
       </Modal.Body>
     </Modal>

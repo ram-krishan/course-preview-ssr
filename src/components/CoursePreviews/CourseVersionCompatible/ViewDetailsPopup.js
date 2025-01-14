@@ -1,5 +1,5 @@
 import React from 'react';
-import { FormattedMessage } from 'react-intl';
+
 import { Modal, Row, Col } from 'react-bootstrap';
 
 const ViewDetailsPopup = ({
@@ -11,7 +11,7 @@ const ViewDetailsPopup = ({
     <Modal show={viewDetails} onHide={closeModal} size="lg">
       <Modal.Header closeButton>
         <Row>
-          <Col><FormattedMessage id="viewDetailsPopup.heading"/></Col>
+          <Col><h1 id="viewDetailsPopup.heading"/></Col>
         </Row>
       </Modal.Header>
       <Modal.Body>

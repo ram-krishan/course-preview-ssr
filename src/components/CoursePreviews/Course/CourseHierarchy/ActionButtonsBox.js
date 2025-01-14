@@ -1,6 +1,6 @@
 import React, {useState, useContext} from 'react';
 import {useHistory, useParams} from 'react-router-dom'
-import { FormattedMessage } from 'react-intl';
+
 import WorkFlowModal from './WorkFlowModal';
 import ValidateDataErrorModal from './ValidateDataErrorModal';
 import { Button, Row, Col } from 'react-bootstrap';
@@ -93,7 +93,7 @@ const ActionButtonsBox = ({
                 disabled={!isValidationNotRunning}
                 className="text-right ml-3 px-3 py-2 workflowStage-btn button-custom-mb btn-actions"
                 onClick={() => handlefetchValidationStatus()}
-              ><FormattedMessage id="coursePreview.btn.validateData" />
+              ><h1 id="coursePreview.btn.validateData" />
               </Button>
             ) : null
           }
@@ -105,7 +105,7 @@ const ActionButtonsBox = ({
             classes="text-right ml-3 px-3 py-2 button-custom-mb btn-actions expand-all-btn"
             isDisabled={!canExpandAll || isExpandedAllLoading}
           >
-            <FormattedMessage id="coursePreview.btn.expandAll" />
+            <h1 id="coursePreview.btn.expandAll" />
           </VibButton>
 
           <VibButton
@@ -114,13 +114,13 @@ const ActionButtonsBox = ({
             classes="text-right ml-3 px-3 py-2 button-custom-mb btn-actions"
             isDisabled={!canCollapseAll}
           >
-            <FormattedMessage id="coursePreview.btn.collapseAll" />
+            <h1 id="coursePreview.btn.collapseAll" />
           </VibButton>
           {
               isAdminPortal ? (
                 <Button
                   className="text-right ml-3 px-3 py-2 workflowStage-btn button-custom-mb btn-actions" onClick={() => handleWorkflowStagesModal()}
-                  ><FormattedMessage id="coursePreview.btn.setWorkflowStage" />
+                  ><h1 id="coursePreview.btn.setWorkflowStage" />
                 </Button>
               ) : null
           }
@@ -153,10 +153,10 @@ const ActionButtonsBox = ({
       <Row>
         {isValidationNotRunning && validationStatus !== "not_validate_yet" ?
             (<div className="validate-data-text">
-            <label><strong><FormattedMessage id ="coursePreview.validateData.api.course_id"/></strong>&nbsp;{getCourseId}</label>
+            <label><strong><h1 id ="coursePreview.validateData.api.course_id"/></strong>&nbsp;{getCourseId}</label>
             </div>)
             : (<div className="validate-data-text">
-            <label><strong><FormattedMessage id ="coursePreview.validateData.api.course_id"/></strong>&nbsp; <FormattedMessage id ="coursePreview.validateData.api.notAvailable"/></label>
+            <label><strong><h1 id ="coursePreview.validateData.api.course_id"/></strong>&nbsp; <h1 id ="coursePreview.validateData.api.notAvailable"/></label>
             </div>)
          }
       </Row>
@@ -165,7 +165,7 @@ const ActionButtonsBox = ({
           <div className="validate-data-text">
             <label>
               <strong>
-                <FormattedMessage id ="coursePreview.validateData.api.course_description"/>
+                <h1 id ="coursePreview.validateData.api.course_description"/>
               </strong>&nbsp;{course_description}
             </label>
           </div>
@@ -176,7 +176,7 @@ const ActionButtonsBox = ({
           <div className="validate-data-text">
             <label>
               <strong>
-                <FormattedMessage id ="coursePreview.validateData.api.duration"/>
+                <h1 id ="coursePreview.validateData.api.duration"/>
               </strong>&nbsp;{duration}
             </label>
           </div>
@@ -185,33 +185,33 @@ const ActionButtonsBox = ({
       <Row>
        {isValidationNotRunning && validationStatus !== "not_validate_yet" ?
           (<div className="validate-data-text">
-          <label><strong><FormattedMessage id ="coursePreview.validateData.api.text"/></strong>&nbsp;{lastValidatedAt}</label>
+          <label><strong><h1 id ="coursePreview.validateData.api.text"/></strong>&nbsp;{lastValidatedAt}</label>
           </div>)
           : null
        }
        {(isValidationNotRunning && validationStatus === 'valid') ?
          <div className='validate-data-error'>
            <span className='validate-data-status badge-success badge mr-2'>
-             <FormattedMessage id="coursePreview.validateData.api.valid" />
+             <h1 id="coursePreview.validateData.api.valid" />
            </span>
          </div>
         : null}
        {(isValidationNotRunning && validationStatus === "invalid") ?
          <div className='validate-data-error'>
            <span class="badge-danger badge mr-2 validate-data-status">
-             <FormattedMessage id="coursePreview.validateData.api.invalid" />
+             <h1 id="coursePreview.validateData.api.invalid" />
            </span>
          </div> : null}
       {(isValidationNotRunning && validationStatus === "not_validate_yet") ?
          <div className='validate-data-error'>
            <span class="badge badge-warning mr-2 ml-3">
-           <FormattedMessage id="coursePreview.validateData.api.notValidatedYet" />
+           <h1 id="coursePreview.validateData.api.notValidatedYet" />
            </span>
          </div> : null}
 
        {isValidationNotRunning ?
         (<Link className='ml-2' onClick={() => setShowValidateDetailsModal(true)}>
-            <FormattedMessage id="coursePreview.validateData.api.viewDetails" />
+            <h1 id="coursePreview.validateData.api.viewDetails" />
          </Link>) : null }
       </Row>
       <WorkFlowModal

@@ -1,7 +1,7 @@
 import React from 'react';
 import { includes } from 'lodash';
 import PropTypes from 'prop-types';
-import { FormattedMessage } from 'react-intl';
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCheck } from '@fortawesome/free-solid-svg-icons';
 import VibTable from '../VibTable';
@@ -28,7 +28,7 @@ const getConfirmedStatus = (confirmedValue) => {
   switch (confirmedValue) {
     case 'pending':
     case 'not_sent':
-      return <FormattedMessage id={`admin.userCollections.userTable.confirmed.${confirmedValue}`} />;
+      return <h1 id={`admin.userCollections.userTable.confirmed.${confirmedValue}`} />;
     default:
       return confirmedValue;
   }
@@ -61,7 +61,7 @@ const UsersList = ({
       ),
     },
     {
-      Header: <span><FormattedMessage id="admin.userCollections.userTable.name" /></span>,
+      Header: <span><h1 id="admin.userCollections.userTable.name" /></span>,
       accessor: 'fullName',
       disableSortBy: false,
       Cell: (props) => (
@@ -76,7 +76,7 @@ const UsersList = ({
     [
       getSharedColumnOptions(),
       {
-        Header: <span><FormattedMessage id="vib.admin.embeddedField.userTable.header.email" /></span>,
+        Header: <span><h1 id="vib.admin.embeddedField.userTable.header.email" /></span>,
         accessor: 'email',
         disableSortBy: false,
         Cell: (props) => (
@@ -102,7 +102,7 @@ const UsersList = ({
     [
       getSharedColumnOptions(),
       {
-        Header: <span><FormattedMessage id="admin.userCollections.userTable.confirmed" /></span>,
+        Header: <span><h1 id="admin.userCollections.userTable.confirmed" /></span>,
         accessor: 'confirmedStatus',
         disableSortBy: false,
         Cell: (props) => (
@@ -112,7 +112,7 @@ const UsersList = ({
         ),
       },
       {
-        Header: <span><FormattedMessage id="admin.userCollections.userTable.manager" /></span>,
+        Header: <span><h1 id="admin.userCollections.userTable.manager" /></span>,
         accessor: 'isManager',
         disableSortBy: false,
         Cell: (props) => (

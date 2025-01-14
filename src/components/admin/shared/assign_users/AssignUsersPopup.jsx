@@ -258,10 +258,10 @@ class AssignUsersPopup extends React.Component {
       >
         <Modal.Header tag="div" closeButton cssModule={{ 'modal-title': 'flex-fill' }}>
           <Row className="px-3">
-            <h3 className="flex-fill"><FormattedMessage id={`admin.shared.assignUsersPopup.${userType}.title`} /></h3>
+            <h3 className="flex-fill"><h1 id={`admin.shared.assignUsersPopup.${userType}.title`} /></h3>
             { !isEmbeddedFieldModal() ? (
               <Button color="success" onClick={this.handleAddUsersClick} disabled={isAddingUsers}>
-                <FormattedMessage id="admin.shared.assignUsersPopup.addSelectedUsers" />
+                <h1 id="admin.shared.assignUsersPopup.addSelectedUsers" />
               </Button>
             ) : null}
           </Row>
@@ -273,7 +273,7 @@ class AssignUsersPopup extends React.Component {
               autoHide
               alertType="success"
               message={(
-                <FormattedMessage
+                <h1
                   id="admin.shared.assignUsersPopup.alert.addedUsers"
                   values={{ usersCount: this.props.addedUsersCount }}
                 />
@@ -323,10 +323,10 @@ class AssignUsersPopup extends React.Component {
             ? (
               <div>
                 <Button className="mr-3" color="primary" onClick={this.handleAddUsersClick}>
-                  <FormattedMessage id="btn.save" />
+                  <h1 id="btn.save" />
                 </Button>
                 <Button color="secondary" onClick={handleClosePopup}>
-                  <FormattedMessage id="btn.cancel" />
+                  <h1 id="btn.cancel" />
                 </Button>
               </div>
             ) : null}

@@ -3,7 +3,7 @@ import React from 'react';
 import { useParams } from 'react-router-dom';
 import { Container, Row, Col } from 'react-bootstrap';
 import { isEmpty } from 'lodash';
-import { FormattedMessage } from 'react-intl';
+
 
 import AlertMessage from '../../shared/AlertMessage';
 import Loader from '../../shared/Loader';
@@ -45,8 +45,8 @@ const ApplyPagePreview = () =>{
           <Col md={12} className="mt-4 justify-content-between mb-4">
             <div className={classNames(styles['title-container'])}>
               <TitleBlock
-                pageTitle={<FormattedMessage id="apply.pageTitle" />}
-                courseTitle={<FormattedMessage id="apply.courseTitle" />}
+                pageTitle={<h1 id="apply.pageTitle" />}
+                courseTitle={<h1 id="apply.courseTitle" />}
                 bottomTxtClassNames={styles['bottom-txt']}
               />
             </div>

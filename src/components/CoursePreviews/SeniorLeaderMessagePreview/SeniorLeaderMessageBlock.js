@@ -2,7 +2,7 @@ import React from 'react';
 import { Col } from 'react-bootstrap';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
-import { FormattedMessage } from 'react-intl';
+
 import { isEmpty } from 'lodash';
 
 import styles from './senior-leader-message-page.module.scss';
@@ -64,7 +64,7 @@ const SeniorLeaderMessageBlock = ({
     <Col lg={isGoalsEmpty ? 12 : 7}>
       <div className={classNames(styles['org-left-container'])}>
         <div className={classNames(styles['goals-heading-text'], 'mt-4 mb-3')}>
-          <FormattedMessage id="goals.heading.videoMessage" />
+          <h1 id="goals.heading.videoMessage" />
         </div>
         { videoOrTextContent() }
       </div>
@@ -78,7 +78,7 @@ const SeniorLeaderMessageBlock = ({
                 variant="secondary"
                 classes={classNames(styles['continue-btn'])}
               >
-                <FormattedMessage id="goals.button.nextActivity" />
+                <h1 id="goals.button.nextActivity" />
               </VibButton>
             </Col>
           )

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Button, Modal } from 'react-bootstrap';
-import { FormattedMessage } from 'react-intl';
+
 import Select from 'react-select';
 import Loader from '../../../shared/Loader';
 import useGetWorkFlowStages from '../hooks/useGetWorkFlowStages';
@@ -27,7 +27,7 @@ const WorkFlowModal = ({ showModal, setErrorMessage, setShowModal, selectedCours
   )
 
   useEffect(() => {
-    // Setting up reset states when we re-open the modal pop 
+    // Setting up reset states when we re-open the modal pop
     if (showModal) {
       setErrorMessage('');
       setSelectWorkflowStage(initialSelectedWorkFlowState);
@@ -44,13 +44,13 @@ const WorkFlowModal = ({ showModal, setErrorMessage, setShowModal, selectedCours
 
   return <Modal show={showModal} onHide={handleClose}>
     <Modal.Header closeButton>
-      <FormattedMessage id="coursePreview.setWorkflowStage.heading" />
+      <h1 id="coursePreview.setWorkflowStage.heading" />
     </Modal.Header>
     {
       getWorkFlowStagesLoading ? < Loader /> : getWorkFlowStagesError ? null : <>
         <Modal.Body>
           {loading ? <Loader /> : null}
-          <FormattedMessage id='coursePreview.setWorkflowStage.body' />
+          <h1 id='coursePreview.setWorkflowStage.body' />
           <Select
             options={renderOptions(stages)}
             onChange={handleChange}
@@ -58,10 +58,10 @@ const WorkFlowModal = ({ showModal, setErrorMessage, setShowModal, selectedCours
         </Modal.Body>
         <Modal.Footer>
           <Button onClick={() => setShowModal(false)}>
-            <FormattedMessage id="coursePreview.setWorkflowStage.btn.cancel" />
+            <h1 id="coursePreview.setWorkflowStage.btn.cancel" />
           </Button>
           <Button color="primary" onClick={() => handleSubmitSelectWorkflowStage(selectWorkflowStage)} disabled={loading || selectWorkflowStage.workflow_stage_uid === '' }>
-            <FormattedMessage id="coursePreview.setWorkflowStage.btn.ok" />
+            <h1 id="coursePreview.setWorkflowStage.btn.ok" />
           </Button>
         </Modal.Footer>
       </>

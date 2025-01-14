@@ -2,7 +2,7 @@
 import React from 'react';
 import { Row, Col } from 'react-bootstrap';
 import { isEmpty } from 'lodash';
-import { FormattedMessage } from 'react-intl';
+
 import classNames from 'classnames';
 
 import TitleBlock from '../../shared/pageTitle';
@@ -42,7 +42,7 @@ const SeniorLeaderMessageComponent = ({
         <div className={classNames(styles['heading-container'], 'mt-4')}>
           <TitleBlock
             label=""
-            pageTitle={<FormattedMessage id="goals.heading.pageTitle" />}
+            pageTitle={<h1 id="goals.heading.pageTitle" />}
             courseTitle={contentstackCourse.title}
             topTxtClassNames={styles['ready-text']}
             bottomTxtClassNames={styles['sub-heading-text']}

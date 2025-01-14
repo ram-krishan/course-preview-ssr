@@ -66,7 +66,7 @@ const AssignAccountsPopup = ({
       getFilteredAccounts();
     }
   }
- 
+
   const handleAddAccountsClick = () => {
     const { isAllAccountsSelected, selectedAccountIds, unSelectedAccountIds, showInActive } = accountsTable;
     if (isEmpty(selectedAccountIds)) {
@@ -127,7 +127,7 @@ const AssignAccountsPopup = ({
         <Row className="px-3">
           <h3 className="flex-fill">{popupTitle}</h3>
           <Button color="success" onClick={handleAddAccountsClick} disabled={isAddingAccounts}>
-            <FormattedMessage id="admin.shared.assignAccountsPopup.addSelectedAccounts" />
+            <h1 id="admin.shared.assignAccountsPopup.addSelectedAccounts" />
           </Button>
         </Row>
       </Modal.Header>
@@ -138,7 +138,7 @@ const AssignAccountsPopup = ({
             autoHide
             alertType="success"
             message={(
-              <FormattedMessage
+              <h1
                 id="admin.shared.assignAccountsPopup.alert.addedAccounts"
                 values={{ accountsCount: addedAccountsCount }}
               />
@@ -208,7 +208,7 @@ const mapDispatchToProps = dispatch => (
 );
 
 AssignAccountsPopup.defaultProps = {
-  popupTitle: <FormattedMessage id="admin.shared.assignAccountsPopup.title" />,
+  popupTitle: <h1 id="admin.shared.assignAccountsPopup.title" />,
   isNoneOptionWithFilters: false,
 };
 

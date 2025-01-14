@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import classNames from 'classnames';
 import { useQuery } from '@apollo/react-hooks';
 import { useParams } from 'react-router-dom';
-import { FormattedMessage } from 'react-intl';
+
 import PropTypes from 'prop-types';
 import {
   get,
@@ -90,7 +90,7 @@ const Questions = ({ location }) => {
       <AlertMessage
         alertType="danger"
         customClass="mt-3"
-        message={<FormattedMessage id="course.exam.noExamAvaialble" />}
+        message={<h1 id="course.exam.noExamAvaialble" />}
       />
     );
   }

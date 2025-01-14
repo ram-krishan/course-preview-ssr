@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { useHistory } from 'react-router-dom';
 import { Col } from 'react-bootstrap';
-import { FormattedMessage } from 'react-intl';
+
 import { isEmpty } from 'lodash';
 
 import { useMutation } from '@apollo/react-hooks';
@@ -71,7 +71,7 @@ const PracticeButton = ({
           classes={styles['leave-practice-btn']}
           handleSubmit={() => handleEndPracticeBtn()}
         >
-          <FormattedMessage id="practicePage.button.endPractice" />
+          <h1 id="practicePage.button.endPractice" />
         </VibButton>
         <VibButton
           key={`${new Date().getTime()}${Math.random()}`}
@@ -80,7 +80,7 @@ const PracticeButton = ({
           classes={styles['next-btn']}
           handleSubmit={() => handleNextBtnSubmit()}
         >
-          <FormattedMessage id="practicePage.button.next" />
+          <h1 id="practicePage.button.next" />
         </VibButton>
       </div>
     </Col>

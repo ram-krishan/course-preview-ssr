@@ -368,7 +368,7 @@ const Page = ({
               isLoading={questionLoading || surveyQuestionLoading}
               variant="outline-secondary"
             >
-              <FormattedMessage id="page.button.submit" />
+              <h1 id="page.button.submit" />
             </VibButton>
           )
           : null
@@ -382,7 +382,7 @@ const Page = ({
             classes={classNames(styles['next-prev-btn'], styles['prev-btn'])}
           >
             <RoundedChevronLeft fillColor="#fff" />
-            <FormattedMessage id="page.button.back" />
+            <h1 id="page.button.back" />
           </VibButton>
           <span className={classNames(styles['back-and-next-text'], 'ml-3')}>
             {previousLinkText(levelTwoCollection, levelOneCollection, data.pageProgress.page, previousLevelTwoCollection, intl)}
@@ -398,7 +398,7 @@ const Page = ({
             variant="secondary"
             classes={classNames(styles['next-prev-btn'], styles['next-btn'])}
           >
-            <FormattedMessage id="button.next" />
+            <h1 id="button.next" />
             <RoundedChevronRight fillColor="#fff" />
           </VibButton>
         </div>

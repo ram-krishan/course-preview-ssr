@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import ReactPaginate from 'react-paginate';
-import { FormattedMessage } from 'react-intl';
+
 import { Button, Card, Row, Col } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlus } from '@fortawesome/free-solid-svg-icons';
@@ -33,7 +33,7 @@ const ActionHeader = ({
           >
             <i className="fa fa-remove" />
             {' '}
-            <FormattedMessage id="admin.userCollections.btn.remove_selected" />
+            <h1 id="admin.userCollections.btn.remove_selected" />
           </Button>
 
           <Button
@@ -43,15 +43,15 @@ const ActionHeader = ({
           >
             <i className="fa fa-remove" />
             {' '}
-            <FormattedMessage id="admin.userCollections.btn.remove_all" />
+            <h1 id="admin.userCollections.btn.remove_all" />
           </Button>
 
           <Button className="btn btn-success btn-sm navbar-btn mr-3 mb-2" onClick={handleAddUsersClick}>
             <FontAwesomeIcon icon={faPlus} />
             {' '}
             { objectType === 'Vib::EmbeddedField'
-              ? <FormattedMessage id="admin.embeddedField.btn.addUser" />
-              : <FormattedMessage id="admin.userCollections.btn.addUsers" />
+              ? <h1 id="admin.embeddedField.btn.addUser" />
+              : <h1 id="admin.userCollections.btn.addUsers" />
             }
           </Button>
           <div className="mb-2">
@@ -68,8 +68,8 @@ const ActionHeader = ({
             { totalPages <= 1 ? null
               : (
                 <ReactPaginate
-                  previousLabel={<FormattedMessage id="pagination.previousLabel" />}
-                  nextLabel={<FormattedMessage id="pagination.nextLabel" />}
+                  previousLabel={<h1 id="pagination.previousLabel" />}
+                  nextLabel={<h1 id="pagination.nextLabel" />}
                   breakLabel="..."
                   breakClassName="break-me"
                   pageCount={totalPages}

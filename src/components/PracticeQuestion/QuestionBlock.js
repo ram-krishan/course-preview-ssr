@@ -3,7 +3,7 @@ import {
   isEmpty, compact,
 } from 'lodash';
 import PropTypes from 'prop-types';
-import { FormattedMessage } from 'react-intl';
+
 import { Link } from 'react-router-dom';
 import LaunchIcon from '@material-ui/icons/Launch';
 import classNames from 'classnames';
@@ -42,13 +42,13 @@ const QuestionBlock = ({
   const lockedLesson = (id) => (
     <p key={id} className={classNames(styles['lesson-unlocked-text'], 'd-flex align-items-center')}>
       <LockIcon />
-      <span className="pl-2"><FormattedMessage id="practicePage.feedback.lessonLocked" /></span>
+      <span className="pl-2"><h1 id="practicePage.feedback.lessonLocked" /></span>
     </p>
   );
 
   const getLessonLink = (link) => (
     <p className={styles['lesson-question-text']}>
-      <FormattedMessage id="practicePage.feedback.heading.seeTheLessonQuestionComesFrom" />
+      <h1 id="practicePage.feedback.heading.seeTheLessonQuestionComesFrom" />
       <Link to={link} target="_blank">
         <LaunchIcon className="ml-1" />
       </Link>

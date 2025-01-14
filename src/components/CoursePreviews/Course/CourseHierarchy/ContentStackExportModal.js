@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Alert, Button, Col, Modal, Row } from 'react-bootstrap';
-import { FormattedMessage } from 'react-intl';
+
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import styles from './course-hierarchy-v2-style.scss';
@@ -97,7 +97,7 @@ const ContentStackExportModal = ({ loading, showModal, setShowModal, startConten
               </div>
             </Col>
           </Row>
-          <p className={classNames(styles['modal-content-text'], 'inner-txt')}><FormattedMessage id="contentstackExportModal.message" /></p>
+          <p className={classNames(styles['modal-content-text'], 'inner-txt')}><h1 id="contentstackExportModal.message" /></p>
           <Modal.Body>
             <Form noValidate validated={validated} onSubmit={handleSubmit}>
               <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
@@ -113,8 +113,8 @@ const ContentStackExportModal = ({ loading, showModal, setShowModal, startConten
                   Please enter a valid email
                 </Form.Control.Feedback>
               </Form.Group>
-              <Button className="px-3 workflowStage-btn button-custom-mb" type="submit" disabled={loading}><FormattedMessage id="contentstackExportModal.button.confirm" /></ Button>
-              <Button onClick={() => handleClose()} className="ml-3 px-3  workflowStage-btn button-custom-mb" type="button"><FormattedMessage id="contentstackExportModal.button.cancel" /></Button>
+              <Button className="px-3 workflowStage-btn button-custom-mb" type="submit" disabled={loading}><h1 id="contentstackExportModal.button.confirm" /></ Button>
+              <Button onClick={() => handleClose()} className="ml-3 px-3  workflowStage-btn button-custom-mb" type="button"><h1 id="contentstackExportModal.button.cancel" /></Button>
             </Form>
           </Modal.Body>
         </Modal.Body>

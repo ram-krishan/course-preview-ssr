@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { FormattedMessage } from 'react-intl';
+
 import VibTable from '../../shared/VibTable';
 
 const AccountsList = ({
@@ -33,7 +33,7 @@ const AccountsList = ({
 
   columnOptionsArray.push(
     {
-      Header: <span><FormattedMessage id="admin.userCollections.userTable.name" /></span>,
+      Header: <span><h1 id="admin.userCollections.userTable.name" /></span>,
       accessor: 'name',
       disableSortBy: false,
       Cell: (props) => (
@@ -43,7 +43,7 @@ const AccountsList = ({
       ),
     },
     {
-      Header: <span><FormattedMessage id="admin.users.accountTable.status" /></span>,
+      Header: <span><h1 id="admin.users.accountTable.status" /></span>,
       accessor: 'status',
       disableSortBy: false,
       Cell: (props) => (

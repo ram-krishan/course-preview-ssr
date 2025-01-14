@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import { Link } from 'react-router-dom';
 import { Media } from 'react-bootstrap';
-import { FormattedMessage } from 'react-intl';
+
 
 import styles from './course-syllabus-docked-view-style.module.scss';
 import { getItemSvgSrc } from '../../shared/ProgressUtility';
@@ -51,14 +51,14 @@ const LeaderMessageContainer = ({ actionPlanTasks, isCourseSyllabusSideView }) =
           {isLeaderMessageDisabled()
             ? (
               <span className={getLeaderMessageTitleClass()}>
-                <FormattedMessage id="heading.leaderMessage" />
+                <h1 id="heading.leaderMessage" />
               </span>
             ) : (
               <Link
                 to={getLeaderMessageActionPlanTask().url}
                 className={getLeaderMessageTitleClass()}
               >
-                <FormattedMessage id="heading.leaderMessage" />
+                <h1 id="heading.leaderMessage" />
               </Link>
             )}
         </span>

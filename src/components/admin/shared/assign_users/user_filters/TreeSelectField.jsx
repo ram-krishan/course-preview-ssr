@@ -1,13 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import TreeSelect from 'rc-tree-select';
-import { FormattedMessage } from 'react-intl';
+
 
 const customizedTreeData = (treeData, isNoneOption) => {
   if(isNoneOption) {
     treeData.unshift({
       value: "null",
-      label: <FormattedMessage id="shared.selectBoxes.options.none" />,
+      label: <h1 id="shared.selectBoxes.options.none" />,
     });
   }
   return treeData;

@@ -1,5 +1,5 @@
 import React from 'react';
-import { FormattedMessage } from 'react-intl';
+
 import PropTypes from 'prop-types';
 import { useHistory } from 'react-router-dom';
 
@@ -14,11 +14,11 @@ const LearnHeading = ({
   return (
     <>
       <TitleBlock
-        pageTitle={<FormattedMessage id={`heading.${isReinforce ? 'reinforce' : 'learn'}`} />}
+        pageTitle={<h1 id={`heading.${isReinforce ? 'reinforce' : 'learn'}`} />}
       />
       <div className="d-flex justify-content-between mt-1 mb-4">
         <span data-testid="current-topic-heading" className={styles['current-topic-heading']}>
-          <FormattedMessage id="learn.heading.currentTopic" values={{ currentTopicTitle }} />
+          <h1 id="learn.heading.currentTopic" values={{ currentTopicTitle }} />
         </span>
       </div>
     </>
